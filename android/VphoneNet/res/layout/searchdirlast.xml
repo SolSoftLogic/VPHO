@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/illustrationsearchb">
+	<LinearLayout 
+		android:layout_weight="0"
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical|center"
+		android:padding="10dp"
+		android:background="@drawable/searchdir">
+	</LinearLayout>
+	<TextView android:id="@+id/pleyouphnu" 
+ 		android:textSize="16dp"
+ 		android:textColor="#000000"
+  		android:text="@string/searchacon" 
+		android:layout_width="fill_parent" 
+		android:padding="10dp"
+		android:layout_height="wrap_content"/>	
+	<LinearLayout android:id="@+id/mainl" 
+  		android:orientation="vertical"
+ 		android:paddingLeft="10dp"
+ 		android:paddingRight="10dp"
+ 		android:paddingTop="10dp"
+  		android:layout_width="fill_parent"
+   		android:layout_height="wrap_content">
+		<LinearLayout 
+			android:id="@+id/phonumbl"
+			android:background="@drawable/rowup"
+			android:paddingLeft="5dp"
+ 			android:paddingRight="5dp"
+  			android:orientation="horizontal"
+  			android:layout_width="fill_parent"
+  			android:layout_height="wrap_content">	
+			<TextView
+				android:width="80dp"
+				android:gravity="center_vertical"
+				android:textSize="16dp"
+				android:textColor="#000000"
+				android:text="@string/searchacon"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"/>	
+		</LinearLayout>	
+		<LinearLayout 
+			android:background="@drawable/rowdown"
+			android:id="@+id/countryl"
+			android:paddingLeft="5dp"
+ 			android:paddingRight="5dp"
+ 			android:orientation="horizontal"
+ 			android:layout_width="fill_parent"
+ 			android:layout_height="40dp">	
+			<TextView
+				android:width="80dp"
+				android:gravity="center_vertical"
+				android:textStyle="bold"
+				android:textSize="16dp"
+				android:textColor="#000000"
+				android:text="@string/country"
+				android:layout_width="wrap_content" 
+				android:layout_height="fill_parent"/>	
+			<Spinner
+				android:id="@+id/country"
+				android:paddingTop="5dp"
+				android:gravity="center_vertical"
+				android:layout_width="wrap_content" 
+				android:singleLine="true"
+				android:layout_height="fill_parent"/>
+		</LinearLayout>
+
+		<LinearLayout android:id="@+id/butto" 
+  			android:orientation="vertical"
+  			android:paddingTop="15dp"
+  			android:layout_width="fill_parent"
+   			android:layout_height="wrap_content">
+			<Button 
+				android:textColor="#222222"
+				android:background="@drawable/button_search"
+				android:textSize="18px"
+				android:id="@+id/done" 
+				android:paddingTop="10dp"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"/>
+		</LinearLayout>
+	</LinearLayout>
+	<TextView android:id="@+id/pleyouphnu" 
+ 		android:textSize="16dp"
+ 		android:textColor="#000000"
+  		android:text="@string/yocasena" 
+		android:layout_width="fill_parent" 
+		android:padding="10dp"
+		android:layout_height="wrap_content"/>	
+
+</LinearLayout>

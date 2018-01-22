@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA747D9F0F9514B9006C5449 /* gsmlib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* gsmlib_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		D11159A412B3FECA00E743EA /* add.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599012B3FECA00E743EA /* add.c */; };
+		D11159A512B3FECA00E743EA /* code.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599112B3FECA00E743EA /* code.c */; };
+		D11159A612B3FECA00E743EA /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = D111599212B3FECA00E743EA /* config.h */; };
+		D11159A712B3FECA00E743EA /* decode.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599312B3FECA00E743EA /* decode.c */; };
+		D11159A812B3FECA00E743EA /* gsm.h in Headers */ = {isa = PBXBuildFile; fileRef = D111599412B3FECA00E743EA /* gsm.h */; };
+		D11159A912B3FECA00E743EA /* gsm_create.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599512B3FECA00E743EA /* gsm_create.c */; };
+		D11159AA12B3FECA00E743EA /* gsm_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599612B3FECA00E743EA /* gsm_decode.c */; };
+		D11159AB12B3FECA00E743EA /* gsm_destroy.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599712B3FECA00E743EA /* gsm_destroy.c */; };
+		D11159AC12B3FECA00E743EA /* gsm_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599812B3FECA00E743EA /* gsm_encode.c */; };
+		D11159AD12B3FECA00E743EA /* gsm_option.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599912B3FECA00E743EA /* gsm_option.c */; };
+		D11159AE12B3FECA00E743EA /* gsm_print.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599A12B3FECA00E743EA /* gsm_print.c */; };
+		D11159AF12B3FECA00E743EA /* long_term.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599B12B3FECA00E743EA /* long_term.c */; };
+		D11159B012B3FECA00E743EA /* lpc.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599C12B3FECA00E743EA /* lpc.c */; };
+		D11159B112B3FECA00E743EA /* preprocess.c in Sources */ = {isa = PBXBuildFile; fileRef = D111599D12B3FECA00E743EA /* preprocess.c */; };
+		D11159B212B3FECA00E743EA /* private.h in Headers */ = {isa = PBXBuildFile; fileRef = D111599E12B3FECA00E743EA /* private.h */; };
+		D11159B312B3FECA00E743EA /* proto.h in Headers */ = {isa = PBXBuildFile; fileRef = D111599F12B3FECA00E743EA /* proto.h */; };
+		D11159B412B3FECA00E743EA /* rpe.c in Sources */ = {isa = PBXBuildFile; fileRef = D11159A012B3FECA00E743EA /* rpe.c */; };
+		D11159B512B3FECA00E743EA /* short_term.c in Sources */ = {isa = PBXBuildFile; fileRef = D11159A112B3FECA00E743EA /* short_term.c */; };
+		D11159B612B3FECA00E743EA /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = D11159A212B3FECA00E743EA /* table.c */; };
+		D11159B712B3FECA00E743EA /* unproto.h in Headers */ = {isa = PBXBuildFile; fileRef = D11159A312B3FECA00E743EA /* unproto.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA747D9E0F9514B9006C5449 /* gsmlib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gsmlib_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D111599012B3FECA00E743EA /* add.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = add.c; path = ../add.c; sourceTree = SOURCE_ROOT; };
+		D111599112B3FECA00E743EA /* code.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = code.c; path = ../code.c; sourceTree = SOURCE_ROOT; };
+		D111599212B3FECA00E743EA /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../config.h; sourceTree = SOURCE_ROOT; };
+		D111599312B3FECA00E743EA /* decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = decode.c; path = ../decode.c; sourceTree = SOURCE_ROOT; };
+		D111599412B3FECA00E743EA /* gsm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gsm.h; path = ../gsm.h; sourceTree = SOURCE_ROOT; };
+		D111599512B3FECA00E743EA /* gsm_create.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_create.c; path = ../gsm_create.c; sourceTree = SOURCE_ROOT; };
+		D111599612B3FECA00E743EA /* gsm_decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_decode.c; path = ../gsm_decode.c; sourceTree = SOURCE_ROOT; };
+		D111599712B3FECA00E743EA /* gsm_destroy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_destroy.c; path = ../gsm_destroy.c; sourceTree = SOURCE_ROOT; };
+		D111599812B3FECA00E743EA /* gsm_encode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_encode.c; path = ../gsm_encode.c; sourceTree = SOURCE_ROOT; };
+		D111599912B3FECA00E743EA /* gsm_option.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_option.c; path = ../gsm_option.c; sourceTree = SOURCE_ROOT; };
+		D111599A12B3FECA00E743EA /* gsm_print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_print.c; path = ../gsm_print.c; sourceTree = SOURCE_ROOT; };
+		D111599B12B3FECA00E743EA /* long_term.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = long_term.c; path = ../long_term.c; sourceTree = SOURCE_ROOT; };
+		D111599C12B3FECA00E743EA /* lpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpc.c; path = ../lpc.c; sourceTree = SOURCE_ROOT; };
+		D111599D12B3FECA00E743EA /* preprocess.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = preprocess.c; path = ../preprocess.c; sourceTree = SOURCE_ROOT; };
+		D111599E12B3FECA00E743EA /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = private.h; path = ../private.h; sourceTree = SOURCE_ROOT; };
+		D111599F12B3FECA00E743EA /* proto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = proto.h; path = ../proto.h; sourceTree = SOURCE_ROOT; };
+		D11159A012B3FECA00E743EA /* rpe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rpe.c; path = ../rpe.c; sourceTree = SOURCE_ROOT; };
+		D11159A112B3FECA00E743EA /* short_term.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = short_term.c; path = ../short_term.c; sourceTree = SOURCE_ROOT; };
+		D11159A212B3FECA00E743EA /* table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = table.c; path = ../table.c; sourceTree = SOURCE_ROOT; };
+		D11159A312B3FECA00E743EA /* unproto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unproto.h; path = ../unproto.h; sourceTree = SOURCE_ROOT; };
+		D2AAC07E0554694100DB518D /* libgsmlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgsmlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libgsmlib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* gsmlib */ = {
+			isa = PBXGroup;
+			children = (
+				D111599012B3FECA00E743EA /* add.c */,
+				D111599112B3FECA00E743EA /* code.c */,
+				D111599212B3FECA00E743EA /* config.h */,
+				D111599312B3FECA00E743EA /* decode.c */,
+				D111599412B3FECA00E743EA /* gsm.h */,
+				D111599512B3FECA00E743EA /* gsm_create.c */,
+				D111599612B3FECA00E743EA /* gsm_decode.c */,
+				D111599712B3FECA00E743EA /* gsm_destroy.c */,
+				D111599812B3FECA00E743EA /* gsm_encode.c */,
+				D111599912B3FECA00E743EA /* gsm_option.c */,
+				D111599A12B3FECA00E743EA /* gsm_print.c */,
+				D111599B12B3FECA00E743EA /* long_term.c */,
+				D111599C12B3FECA00E743EA /* lpc.c */,
+				D111599D12B3FECA00E743EA /* preprocess.c */,
+				D111599E12B3FECA00E743EA /* private.h */,
+				D111599F12B3FECA00E743EA /* proto.h */,
+				D11159A012B3FECA00E743EA /* rpe.c */,
+				D11159A112B3FECA00E743EA /* short_term.c */,
+				D11159A212B3FECA00E743EA /* table.c */,
+				D11159A312B3FECA00E743EA /* unproto.h */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = gsmlib;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* gsmlib_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* gsmlib_Prefix.pch in Headers */,
+				D11159A612B3FECA00E743EA /* config.h in Headers */,
+				D11159A812B3FECA00E743EA /* gsm.h in Headers */,
+				D11159B212B3FECA00E743EA /* private.h in Headers */,
+				D11159B312B3FECA00E743EA /* proto.h in Headers */,
+				D11159B712B3FECA00E743EA /* unproto.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* gsmlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "gsmlib" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gsmlib;
+			productName = gsmlib;
+			productReference = D2AAC07E0554694100DB518D /* libgsmlib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "gsmlib" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* gsmlib */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* gsmlib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D11159A412B3FECA00E743EA /* add.c in Sources */,
+				D11159A512B3FECA00E743EA /* code.c in Sources */,
+				D11159A712B3FECA00E743EA /* decode.c in Sources */,
+				D11159A912B3FECA00E743EA /* gsm_create.c in Sources */,
+				D11159AA12B3FECA00E743EA /* gsm_decode.c in Sources */,
+				D11159AB12B3FECA00E743EA /* gsm_destroy.c in Sources */,
+				D11159AC12B3FECA00E743EA /* gsm_encode.c in Sources */,
+				D11159AD12B3FECA00E743EA /* gsm_option.c in Sources */,
+				D11159AE12B3FECA00E743EA /* gsm_print.c in Sources */,
+				D11159AF12B3FECA00E743EA /* long_term.c in Sources */,
+				D11159B012B3FECA00E743EA /* lpc.c in Sources */,
+				D11159B112B3FECA00E743EA /* preprocess.c in Sources */,
+				D11159B412B3FECA00E743EA /* rpe.c in Sources */,
+				D11159B512B3FECA00E743EA /* short_term.c in Sources */,
+				D11159B612B3FECA00E743EA /* table.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/gsmlib.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = gsmlib_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = gsmlib;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/gsmlib.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = gsmlib_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = gsmlib;
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SASR,
+					WAV49,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SASR,
+					WAV49,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SASR = YES;
+				SDKROOT = iphoneos;
+				WAV49 = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "gsmlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "gsmlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

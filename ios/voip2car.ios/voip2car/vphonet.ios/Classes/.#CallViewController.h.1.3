@@ -1,0 +1,47 @@
+//
+//  VideocallViewController.h
+//  Vphonet
+
+#import <map>
+#import <UIKit/UIKit.h>
+#import "VPContactList.h"
+
+typedef std::map<VPCALL, UIImageView*> CallerMap;
+
+@interface CallViewController : UIViewController {
+	CallerMap		*callers; // conference support
+	VPContact		*vpcontact;
+	time_t			startTime;
+	NSTimer			*updateGUITimer;
+    
+	// GUI
+    UIImageView *callerView;
+    UILabel *callerNameLabel;
+    UILabel *timeLabel;
+	// Options popup
+	UIView		*optionsCall;
+	UIButton	*buttonHold;
+	UIButton	*buttonMute;
+	UIButton	*buttonVideo;
+}
+
+@property (nonatomic, retain) IBOutlet UIView	*optionsCall;
+@property (nonatomic, retain) IBOutlet UIButton *buttonHold;
+@property (nonatomic, retain) IBOutlet UIButton *buttonMute;
+@property (nonatomic, retain) IBOutlet UIButton *buttonVideo;
+
+- (IBAction) onMuteClick: (id)sender;
+- (IBAction) onKeypadClick: (id)sender;
+- (IBAction) onSpeekerClick: (id)sender;
+- (IBAction) onAddCallClick: (id)sender;
+- (IBAction) onHoldClick: (id)sender;
+- (IBAction) onCaptureClick: (id)sender;
+- (IBAction) onEndCallClick: (id)sender;
+
+
+
+- (id)initWithCall:(VPCALL)call;
+
+- (id)initWithContact:(VPContact*)vpcontact bearer:(unsigned)bearer;
+
+@end

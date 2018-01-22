@@ -1,0 +1,640 @@
+<ipcar>
+	<section name="Qt">
+		<stylesheet selector="QWidget">
+			<background-repeat 	value="no-repeat" 	/>
+			<font-size			value="16px"		/>
+			<font-family		value="MS Shell Dlg 2"	/>
+			<border              value="none"		/>
+			<border-style        value="none"		/>
+			<border-width        value="0px"		/>
+		</stylesheet>
+		
+		<stylesheet selector="#qt_calendar_navigationbar">
+			<background-color	value="rgba( 0, 0, 127, 100% )" />
+		</stylesheet>
+
+		<stylesheet selector="QDialog QPushButton">
+			<border-image        value="url(qss/general/QPushButton/typeA.png)"/>
+			<border-top-width    value="4px"		/>
+			<border-bottom-width value="6px"		/>
+			<border-left-width   value="4px"		/>
+			<border-right-width  value="6px"		/>
+		</stylesheet>
+		<stylesheet selector="QDialog QPushButton:hover:!pressed">
+			<border-image        value="url(qss/general/QPushButton/typeA-hover.png)"/>
+		</stylesheet>
+
+		
+		<stylesheet selector="QPushButton[type='none']">
+			<border              value="none"		/>
+			<border-style        value="none"		/>
+			<border-width        value="0px"		/>
+		</stylesheet>
+		<stylesheet selector="QPushButton[type='typeA']">
+			<border-image        value="url(qss/general/QPushButton/typeA.png)"/>
+			<border-top-width    value="4px"		/>
+			<border-bottom-width value="6px"		/>
+			<border-left-width   value="4px"		/>
+			<border-right-width  value="6px"		/>
+		</stylesheet>
+		<stylesheet selector="QPushButton[type='typeA']:hover:!pressed">
+			<border-image        value="url(qss/general/QPushButton/typeA-hover.png)"/>
+		</stylesheet>
+		<stylesheet selector="QPushButton[type='typeB']">
+			<border-image        value="url(qss/general/QPushButton/typeB.png)"/>
+			<border-top-width    value="4px"		/>
+			<border-bottom-width value="6px"		/>
+			<border-left-width   value="4px"		/>
+			<border-right-width  value="6px"		/>
+		</stylesheet>
+		<stylesheet selector="QPushButton[type='typeB']:hover:!pressed">
+			<border-image        value="url(qss/general/QPushButton/typeB-hover.png)"/>
+		</stylesheet>
+		<stylesheet selector="QPushButton[type='green']">
+			<border-image        value="url(qss/general/QPushButton/green.png)"/>
+			<border-top-width    value="4px"		/>
+			<border-bottom-width value="6px"		/>
+			<border-left-width   value="4px"		/>
+			<border-right-width  value="6px"		/>
+		</stylesheet>
+		<stylesheet selector="QPushButton[type='green']:hover:!pressed">
+			<border-image        value="url(qss/general/QPushButton/green-hover.png)"/>
+		</stylesheet>
+
+		<stylesheet selector="QHeaderView::section">
+			<spacing			value="10px"		/>
+			<background-image	value="url(qss/general/QHeaderView/background.png)"/>
+			<color				value="white"		/>
+			<border				value="1px solid white"/>
+			<margin				value="0px"			/>
+			<text-align			value="right"		/>
+		</stylesheet>
+		
+		<stylesheet selector="QProgressBar">
+			<border-image        value="url(qss/general/QProgressBar/background.png)"/>
+			<border-top-width    value="2px"		/>
+			<border-bottom-width value="2px"		/>
+			<border-left-width   value="4px"		/>
+			<border-right-width  value="4px"		/>
+		</stylesheet>
+		<stylesheet selector="QProgressBar::chunk">
+			<background-image	value="url(qss/general/QProgressBar/chunk.png)" />
+			<width				value="14px" />
+			<margin				value="2.5px" />
+		</stylesheet>
+
+		<stylesheet selector="QLabel[type='whiteOnBlack']	">
+			<background-image   value="url(qss/general/QLabel/white-on-black.png)" />
+			<min-height         value="36px" />
+			<max-height         value="50px" />
+			<font-size          value="20px" />
+			<font-weight		value="400" />
+			<color				value="white" />
+		</stylesheet>
+		<stylesheet selector="QLabel[type='blackOnWhite']	">
+			<background-image    value="url(qss/general/QLabel/black-on-white.png)" />
+			<min-height          value=" 36px" />
+			<max-height          value=" 50px" />
+			<font-size           value="20px" />
+			<font-weight			value="400" />
+			<color				value="black" />
+		</stylesheet>
+
+		<stylesheet selector="QLineEdit">
+			<border-image        value="url(qss/general/QLineEdit/border.png)" />
+			<background-color	value="rgba( 255, 255, 255, 0% )" />
+			<border-top-width    value=" 2px" />
+			<border-bottom-width value=" 5px" />
+			<border-left-width   value=" 2px" />
+			<border-right-width  value=" 4px" />
+		</stylesheet>
+
+		<stylesheet selector="QTextEdit">
+			<background-color	value="rgba( 255, 255, 255, 0% )" />
+			<font-size           value="12px" />
+			<border-top-width    value=" 6px" />
+			<border-bottom-width value=" 6px" />
+			<border-left-width   value=" 6px" />
+			<border-right-width  value=" 6px" />
+		</stylesheet>
+
+		<stylesheet selector="QCheckBox::indicator">
+			<min-width           value="17px" />
+			<max-width          	value="17px" />
+			<min-height          value="17px" />
+			<max-height         	value="17px" />
+		</stylesheet>
+		<stylesheet selector="QCheckBox::indicator:unchecked">
+			<image               value="url(qss/general/QCheckBox/image-off.png)" />
+		</stylesheet>
+		<stylesheet selector="QCheckBox::indicator:unchecked:hover:!pressed">
+			<image               value="url(qss/general/QCheckBox/image-off.png)" />
+		</stylesheet>
+		<stylesheet selector="QCheckBox::indicator:checked">
+			<image               value="url(qss/general/QCheckBox/image-on.png)" />
+		</stylesheet>
+		<stylesheet selector="QCheckBox::indicator:checked:hover:!pressed">
+			<image               value="url(qss/general/QCheckBox/image-on.png)" />
+		</stylesheet>
+		<stylesheet selector="QCheckBox::indicator:indeterminate:hover:!pressed">
+		</stylesheet>
+
+		<stylesheet selector="QRadioButton::indicator">
+			<width               value="24px" />
+			<height              value="24px" />
+		</stylesheet>
+		<stylesheet selector="QRadioButton::indicator::unchecked">
+			<image               value="url(qss/general/QRadioButton/image-off.png)" />
+		</stylesheet>
+		<stylesheet selector="QRadioButton::indicator:unchecked:hover:!pressed">
+			<image               value="url(qss/general/QRadioButton/image-off.png)" />
+		</stylesheet>
+		<stylesheet selector="QRadioButton::indicator::checked">
+			<image               value="url(qss/general/QRadioButton/image-on.png)" />
+		</stylesheet>
+		<stylesheet selector="QRadioButton::indicator:checked:hover:!pressed">
+			<image               value="url(qss/general/QRadioButton/image-on.png)" />
+		</stylesheet>
+
+		<stylesheet selector="QComboBox">
+			<font-size           value="18px" />
+
+			<border-image        value="url(qss/general/QComboBox/border.png)" />
+			<border-top-width    value=" 1px" />
+			<border-bottom-width value=" 4px" />
+			<border-left-width   value=" 2px" />
+			<border-right-width  value=" 1px" />
+			<padding			 value=" 1px 1px 1px 3px" />
+		</stylesheet>
+		<stylesheet selector="QComboBox:on">
+			<padding-top		value="3px"		/>
+			<padding-left		value="4px"		/>
+ 		</stylesheet>
+		<stylesheet selector="QComboBox::drop-down">
+			<background-image    value="url(qss/general/QComboBox/down.png)" />
+
+			<padding             value="0px" />
+
+			<subcontrol-origin   value="padding" />
+			<subcontrol-position value="right top" />
+
+			<min-width           value=" 40px" />
+			<max-width           value=" 40px" />
+			<min-height          value=" 28px" />
+			<max-height          value=" 28px" />
+		</stylesheet>
+		<stylesheet selector="QComboBox::drop-down:hover:!pressed">
+			<background-image    value="url(qss/general/QComboBox/down-hover.png)" />
+
+			<min-width           value=" 40px" />
+			<max-width           value=" 40px" />
+			<min-height          value=" 28px" />
+			<max-height          value=" 28px" />  
+		</stylesheet>
+
+ 		<stylesheet selector="QListView">
+			<show-decoration-selected	value="1" />
+		</stylesheet>
+		<stylesheet selector="QListView::item:alternate">
+			<background			value="#EEEEEE" />
+		</stylesheet>
+		<stylesheet selector="QListView::item:selected">
+			<border				value="1px solid #6a6ea9" />
+		</stylesheet>
+		<stylesheet selector="QListView::item:selected:!active">
+			<background			value="qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ABAFE5, stop: 1 #8588B2)" />
+		</stylesheet>
+		<stylesheet selector="QListView::item:selected:active">
+			<background			value="qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6a6ea9, stop: 1 #888dd9)" />
+		</stylesheet>
+		<stylesheet selector="QListView::item:hover">
+			<background			value="qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #FAFBFE, stop: 1 #DCDEF1)" />
+		</stylesheet>	
+				
+		<stylesheet selector="QSlider::groove:horizontal">
+			<border         	value="1px solid #999999" />
+			<height				value="8px" /> 
+			<background		 	value="qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4)" />
+			<margin				value="2px 0" />
+		</stylesheet>
+
+		<stylesheet selector="QSlider::handle:horizontal">
+			<background-image	value="url(qss/general/QSlider/handle.png)" />
+			<border		 		value="1px solid #5c5c5c" />
+			<width		 	 	value="18px" />
+			<margin		 		value="-2px 0" /> 
+			<border-radius	 	value="3px" />
+		</stylesheet>
+
+		<stylesheet selector="QSlider::handle:horizontal:hover:!pressed">
+			<background-image	value="url(qss/general/QSlider/handle-hover.png)" />
+			<border		 		value="1px solid #5c5c5c" />
+			<width		 	 	value="18px" />
+			<margin		 		value="-2px 0" /> 
+			<border-radius	 	value="3px" />
+		</stylesheet>
+
+		<stylesheet selector="QScrollBar:vertical">
+			<border				value="0px solid grey" />
+			<background-image    value="url(qss/general/QScrollBar/ver/background.png)" />
+			<background-repeat	value="repeat-xy" />
+			<width				value="30px" />
+			<margin				value="32px 0px 32px 0px" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::handle:vertical">
+			<background-image	value="url(qss/general/QScrollBar/ver/handle.png)" />
+			<background-repeat	value="none" />
+			<min-height			value="24px" />
+			<height				value="24px" />
+			<max-height			value="24px" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::handle:vertical:hover:!pressed">
+			<background-image	value="url(qss/general/QScrollBar/ver/handle-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::add-line:vertical">
+			<background-image	value="url(qss/general/QScrollBar/ver/down-arrow.png)" />
+			<height				value="32px" />
+			<subcontrol-position	value="bottom" />
+			<subcontrol-origin	value="margin" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::add-line:vertical:hover:!pressed">
+			<background-image	value="url(qss/general/QScrollBar/ver/down-arrow-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::sub-line:vertical">
+			<background-image	value="url(qss/general/QScrollBar/ver/up-arrow.png)" />
+			<height				value="32px" />
+			<subcontrol-position	value="top" />
+			<subcontrol-origin	value="margin" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::sub-line:vertical:hover:!pressed">
+			<background-image	value="url(qss/general/QScrollBar/ver/up-arrow-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical">
+			<background			value="none" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar:horizontal">
+			<border				value="0px solid grey" />
+			<background-image    value="url(qss/general/QScrollBar/hor/background.png)" />
+			<background-repeat	value="repeat-xy" />
+			<height				value="30px" />
+			<margin				value="0px 32px 0 32px" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::handle:horizontal">
+			<background-image	value="url(qss/general/QScrollBar/hor/handle.png)" />
+			<background-repeat	value="none" />
+			<min-width			value="24px" />
+			<width				value="24px" />
+			<max-width			value="24px" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::handle:horizontal:hover:!pressed">
+			<background-image	value="url(qss/general/QScrollBar/hor/handle-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::sub-line:horizontal">
+			<background-image	value="url(qss/general/QScrollBar/hor/left-arrow.png)" />
+			<width				value="32px" />
+			<subcontrol-position	value="left" />
+			<subcontrol-origin	value="margin" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::sub-line:horizontal:hover:!pressed">
+			<background-image	value="url(qss/general/QScrollBar/hor/left-arrow-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::add-line:horizontal">
+			<background-image	value="url(qss/general/QScrollBar/hor/right-arrow.png)" />
+			<width				value="32px" />
+			<subcontrol-position	value="right" />
+			<subcontrol-origin	value="margin" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::add-line:horizontal:hover:!pressed">
+			<background-image	value="url(qss/general/QScrollBar/hor/right-arrow-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal">
+			<background			value="none" />
+		</stylesheet>
+		
+		<stylesheet selector="QCheckBox::indicator">
+			<min-width           value="17px" />
+			<max-width          	value="17px" />
+			<min-height          value="17px" />
+			<max-height         	value="17px" />
+		</stylesheet>
+		<stylesheet selector="QCheckBox::indicator:unchecked">
+			<image               value="url(qss/navigationForm/QCheckBox/image-off.png)" />
+		</stylesheet>
+		<stylesheet selector="QCheckBox::indicator:unchecked:hover:!pressed">
+			<image               value="url(qss/navigationForm/QCheckBox/image-off.png)" />
+		</stylesheet>
+		<stylesheet selector="QCheckBox::indicator:checked">
+			<image               value="url(qss/navigationForm/QCheckBox/image-on.png)" />
+		</stylesheet>
+		<stylesheet selector="QCheckBox::indicator:checked:hover:!pressed">
+			<image               value="url(qss/navigationForm/QCheckBox/image-on.png)" />
+		</stylesheet>
+	</section>
+	
+	<section name="global">
+		<stylesheet selector="#image--noSound">
+			<background-image    value="url(qss/general/image/noSound.png)" />
+			<min-width           value="36px" />
+			<max-width           value="36px" />
+			<min-height          value="36px" />
+			<max-height          value="36px" />
+		</stylesheet>
+		<stylesheet selector="#image--fullVolume">
+			<background-image    value="url(qss/general/image/fullVolume.png)" />
+			<min-width           value="36px" />
+			<max-width           value="36px" />
+			<min-height          value="36px" />
+			<max-height          value="36px" />
+		</stylesheet>
+		<stylesheet selector="#hseparator">
+			<background-image    value="url(qss/general/image/hseparator.png)" />
+			<min-width           value="676px" />
+			<max-width           value="676px" />
+			<min-height          value="3px" />
+			<max-height          value="3px" />
+		</stylesheet>
+		<stylesheet selector="#vseparator">
+			<background-image    value="url(qss/general/image/vseparator.png)" />
+			<min-width           value="1px" />
+			<max-width           value="1px" />
+			<min-height          value="48px" />
+			<max-height          value="48px" />
+		</stylesheet>
+	</section>
+
+	<section name="browserForm">
+		<stylesheet selector="#browser_address">
+			<font-size           value="20px" />
+			<border-image        value="url(qss/browserForm/editborder.png)" />
+			<border-top-width    value=" 2px" />
+			<border-bottom-width value=" 5px" />
+			<border-left-width   value="12px" />
+			<border-right-width  value="12px" />
+		</stylesheet>
+	</section>
+		
+	<section name="logForm">
+		<stylesheet selector="#logForm">
+			<background-image    value="url(qss/logForm/background.png)" />
+			<background-position	value="bottom left" />
+		</stylesheet>
+		<stylesheet selector="#log_typeVoice">
+			<background-image    value="url(qss/logForm/voice.png)" />
+			<min-width			 value="56" />
+			<min-height			 value="50" />
+		</stylesheet>
+		<stylesheet selector="#log_typeChat">
+			<background-image    value="url(qss/logForm/chat.png)" />
+			<min-width			 value="56" />
+			<min-height			 value="50" />
+		</stylesheet>
+		<stylesheet selector="#log_typeSms">
+			<background-image    value="url(qss/logForm/sms.png)" />
+			<min-width			 value="56" />
+			<min-height			 value="50" />
+		</stylesheet>
+		<stylesheet selector="#log_typeFile">
+			<background-image    value="url(qss/logForm/file.png)" />
+			<min-width			 value="56" />
+			<min-height			 value="50" />
+		</stylesheet>
+		<stylesheet selector="#log_typeVideo">
+			<background-image    value="url(qss/logForm/video.png)" />
+			<min-width			 value="56" />
+			<min-height			 value="50" />
+		</stylesheet>
+		<stylesheet selector="#log_typeVideom">
+			<background-image    value="url(qss/logForm/videom.png)" />
+			<min-width			 value="56" />
+			<min-height			 value="50" />
+		</stylesheet>
+
+		<stylesheet selector="#log_item[type='new']">
+			<background-image    value="url(qss/logForm/new.png)" />
+			<min-width			 value="47" />
+			<min-height			 value="50" />
+		</stylesheet>
+		<stylesheet selector="#log_item[type='old']">
+			<background-image    value="url(qss/logForm/old.png)" />
+			<min-width			 value="47" />
+			<min-height			 value="50" />
+		</stylesheet>
+		<stylesheet selector="#log_item[type='flagged']">
+			<background-image    value="url(qss/logForm/flagged.png)" />
+			<min-width			 value="47" />
+			<min-height			 value="50" />
+		</stylesheet>
+		<stylesheet selector="#log_item[type='unflagged']">
+			<background-image    value="url(qss/logForm/unflagged.png)" />
+			<min-width			 value="47" />
+			<min-height			 value="50" />
+		</stylesheet>
+		<stylesheet selector="#log_item[type='answered']">
+			<background-image    value="url(qss/logForm/answered.png)" />
+			<min-width			 value="47" />
+			<min-height			 value="50" />
+		</stylesheet>
+		<stylesheet selector="#log_item[type='unanswered']">
+			<background-image    value="url(qss/logForm/unanswered.png)" />
+			<min-width			 value="47" />
+			<min-height			 value="50" />
+		</stylesheet>
+		
+	</section>
+		
+	<section name="contactsForm">
+		<stylesheet selector="#contacts_clientContainer">
+			<background-image   value="url(qss/contactsForm/background.png)" />
+			<background-repeat	value="repeat-xy" />
+		</stylesheet>
+		<stylesheet selector="#contacts_call">
+			<background-image    value="url(qss/contactsForm/call.png)" />
+
+			<min-width           value="56px" />
+			<max-width           value="56px" />
+			<min-height          value="50px" />
+			<max-height          value="50px" />    
+		</stylesheet>
+		<stylesheet selector="#contacts_call:hover:!pressed">
+			<background-image    value="url(qss/contactsForm/call-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="#contacts_call:disabled">
+			<background-image    value="url(qss/contactsForm/call-disabled.png)" />
+		</stylesheet>
+		<stylesheet selector="#contacts_call:disabled">
+			<background-image    value="url(qss/contactsForm/call-disabled.png)" />
+		</stylesheet>
+		<stylesheet selector="#contacts_chat">
+			<background-image    value="url(qss/contactsForm/chat.png)" />
+
+			<min-width           value="56px" />
+			<max-width           value="56px" />
+			<min-height          value="50px" />
+			<max-height          value="50px" />    
+		</stylesheet>
+		<stylesheet selector="#contacts_chat:hover:!pressed">
+			<background-image    value="url(qss/contactsForm/chat-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="#contacts_file">
+			<background-image    value="url(qss/contactsForm/file.png)" />
+
+			<min-width           value="56px" />
+			<max-width           value="56px" />
+			<min-height          value="50px" />
+			<max-height          value="50px" />    
+		</stylesheet>
+		<stylesheet selector="#contacts_file:hover:!pressed">
+			<background-image    value="url(qss/contactsForm/file-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="#contacts_mobile">
+			<background-image    value="url(qss/contactsForm/mobile.png)" />
+
+			<min-width           value="56px" />
+			<max-width           value="56px" />
+			<min-height          value="50px" />
+			<max-height          value="50px" />    
+		</stylesheet>
+		<stylesheet selector="#contacts_mobile:hover:!pressed">
+			<background-image    value="url(qss/contactsForm/mobile-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="#contacts_mobile:disabled">
+			<background-image    value="url(qss/contactsForm/mobile-disabled.png)" />
+		</stylesheet>
+
+		<stylesheet selector="#contacts_sms">
+			<background-image    value="url(qss/contactsForm/sms.png)" />
+
+			<min-width           value="56px" />
+			<max-width           value="56px" />
+			<min-height          value="50px" />
+			<max-height          value="50px" />    
+		</stylesheet>
+		<stylesheet selector="#contacts_sms:hover:!pressed">
+			<background-image    value="url(qss/contactsForm/sms-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="#contacts_video">
+			<background-image    value="url(qss/contactsForm/video.png)" />
+
+			<min-width           value="56px" />
+			<max-width           value="56px" />
+			<min-height          value="50px" />
+			<max-height          value="50px" />    
+		</stylesheet>
+		<stylesheet selector="#contacts_video:hover:!pressed">
+			<background-image    value="url(qss/contactsForm/video-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="#contacts_video:disabled">
+			<background-image    value="url(qss/contactsForm/video-disabled.png)" />
+		</stylesheet>
+		<stylesheet selector="#contacts_videom">
+			<background-image    value="url(qss/contactsForm/videom.png)" />
+
+			<min-width           value="56px" />
+			<max-width           value="56px" />
+			<min-height          value="50px" />
+			<max-height          value="50px" />    
+		</stylesheet>
+		<stylesheet selector="#contacts_videom:hover:!pressed">
+			<background-image    value="url(qss/contactsForm/videom-hover.png)" />
+		</stylesheet>
+
+		<stylesheet selector="#contacts_status">
+			<min-width           value="56px" />
+			<max-width           value="56px" />
+			<min-height          value="50px" />
+			<max-height          value="50px" />    
+		</stylesheet>
+		<stylesheet selector="#contacts_status[type='unknown']">
+			<background-image    value="url(qss/contactsForm/nostatus.png)" />
+		</stylesheet>
+		<stylesheet selector="#contacts_status[type='online']">
+			<background-image    value="url(qss/contactsForm/online.png)" />
+		</stylesheet>
+		<stylesheet selector="#contacts_status[type='offline']">
+			<background-image    value="url(qss/contactsForm/offline.png)" />
+		</stylesheet>
+	</section>
+		
+	<section name="ftpForm">
+		<stylesheet selector="#ftpForm">
+			<background-image    value="url(qss/ftpForm/background.png)" />
+		</stylesheet>
+		<stylesheet selector="#ftp_add">
+			<background-image    value="url(qss/ftpForm/add.png)" />
+
+			<min-width           value="48px" />
+			<min-height          value="51px" />
+		</stylesheet>
+		<stylesheet selector="#ftp_add:hover:!pressed">
+			<background-image    value="url(qss/ftpForm/add-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="#ftp_del">
+			<background-image    value="url(qss/ftpForm/del.png)" />
+
+			<min-width           value="48px" />
+			<min-height          value="51px" />
+		</stylesheet>
+		<stylesheet selector="#ftp_del:hover:!pressed">
+			<background-image    value="url(qss/ftpForm/del-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="#ftp_hold">
+			<background-image    value="url(qss/ftpForm/hold.png)" />
+
+			<min-width           value="48px" />
+			<min-height          value="51px" />
+		</stylesheet>
+		<stylesheet selector="#ftp_hold:hover:!pressed">
+			<background-image    value="url(qss/ftpForm/hold-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="#ftp_send">
+			<background-image    value="url(qss/ftpForm/send.png)" />
+
+			<min-width           value="48px" />
+			<min-height          value="51px" />
+		</stylesheet>
+		<stylesheet selector="#ftp_send:hover:!pressed">
+			<background-image    value="url(qss/ftpForm/send-hover.png)" />
+		</stylesheet>
+		<stylesheet selector="#ftp_disc">
+			<background-image    value="url(qss/ftpForm/disc.png)" />
+
+			<min-width           value="48px" />
+			<min-height          value="51px" />
+		</stylesheet>
+		<stylesheet selector="#ftp_disc:hover:!pressed">
+			<background-image    value="url(qss/ftpForm/disc-hover.png)" />
+		</stylesheet>
+	</section>
+		
+	<section name="smsForm">
+		<stylesheet selector="#sms_input">
+			<font-size			value="18px"		/>
+			<font-family		value="Times New Roman"	/>
+		</stylesheet>
+		
+		<stylesheet selector="#sms_tomobile">
+			<color				value="rgb(255, 255, 255)" />
+		</stylesheet>
+		
+		
+		<stylesheet selector="#sms_backcounter">
+			<background-color	 value="rgba( 255, 255, 255, 0% )" />
+			<font-size           value="12px" />
+			<border-top-width    value=" 6px" />
+			<border-bottom-width value=" 6px" />
+			<border-left-width   value=" 6px" />
+			<border-right-width  value=" 6px" />
+		</stylesheet>
+		
+	</section>
+	
+	<section name="voiceCallForm">
+		<stylesheet selector="#frame">
+			<background-image    value="url(qss/voiceCallForm/frame.png)" />
+		</stylesheet>
+		
+		<stylesheet selector="#voiceCall_parties" >
+			<background-color	 value="rgba( 255, 255, 255, 0% )" />
+		</stylesheet>
+	</section>
+</ipcom-group>

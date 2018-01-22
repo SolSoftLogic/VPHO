@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>videoConfForm</class>
+ <widget class="QWidget" name="videoConfForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>707</width>
+    <height>460</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="videoConf_video1" native="true">
+   <property name="geometry">
+    <rect>
+     <x>53</x>
+     <y>78</y>
+     <width>236</width>
+     <height>236</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="videoConf_name1">
+   <property name="geometry">
+    <rect>
+     <x>58</x>
+     <y>24</y>
+     <width>227</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_end1">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_sms1">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_chat1">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_file1">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="videoConf_video2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>418</x>
+     <y>78</y>
+     <width>236</width>
+     <height>236</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="videoConf_name2">
+   <property name="geometry">
+    <rect>
+     <x>421</x>
+     <y>24</y>
+     <width>227</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_file2">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_end2">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_sms2">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_chat2">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_hold1">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_resume1">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_hold2">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoConf_resume2">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>336</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

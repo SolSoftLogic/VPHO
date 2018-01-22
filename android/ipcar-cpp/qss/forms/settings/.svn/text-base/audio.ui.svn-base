@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>audioForm</class>
+ <widget class="QWidget" name="audioForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>688</width>
+    <height>578</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QComboBox" name="audio_oDevice">
+   <property name="geometry">
+    <rect>
+     <x>317</x>
+     <y>55</y>
+     <width>306</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="minimumContentsLength">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="audio_iDevice">
+   <property name="geometry">
+    <rect>
+     <x>317</x>
+     <y>235</y>
+     <width>306</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="audio_iLine">
+   <property name="geometry">
+    <rect>
+     <x>317</x>
+     <y>281</y>
+     <width>306</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QSlider" name="audio_iLevel">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>332</y>
+     <width>280</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="audio_oLevel">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>106</y>
+     <width>280</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>55</y>
+     <width>230</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Device Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>235</y>
+     <width>230</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Device Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>281</y>
+     <width>230</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Device Line</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>101</y>
+     <width>230</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Device Volume</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>327</y>
+     <width>230</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Device Volume</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>9</y>
+     <width>230</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Playing Device</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>189</y>
+     <width>230</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Recording Device</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="audio_minIVolume">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>320</y>
+     <width>40</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="audio_maxIVolume">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>320</y>
+     <width>40</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="audio_minOVolume">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>98</y>
+     <width>40</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="audio_maxOVolume">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>98</y>
+     <width>40</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

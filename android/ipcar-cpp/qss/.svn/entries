@@ -1,0 +1,241 @@
+10
+
+dir
+506
+svn+ssh://mrolnik@mrolnik.svn.ssh/var/svn-repos/adar/vphonet/trunk/gui/qss-Voip2Car
+svn+ssh://mrolnik@mrolnik.svn.ssh/var/svn-repos
+
+
+
+2011-02-03T21:18:50.411540Z
+505
+mrolnik
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+1922890e-ef63-4918-9f95-1032048e99bd
+
+mmsForm
+dir
+
+signalIntensityIndicator
+dir
+
+gpsMessageForm
+dir
+
+networkConfForm
+dir
+
+navigationForm
+dir
+
+voiceCallForm
+dir
+
+smsForm
+dir
+
+videoCallForm
+dir
+
+progressForm
+dir
+
+dialForm
+dir
+
+videoConfForm
+dir
+
+browserForm
+dir
+
+messageForm
+dir
+
+networkForm
+dir
+
+ftpForm
+dir
+
+infoForm
+dir
+
+settingsForm
+dir
+
+audioForm
+dir
+
+forms
+dir
+
+captureForm
+dir
+
+topMenu
+dir
+
+directoryForm
+dir
+
+stylesheet.xml
+file
+
+
+
+
+2011-02-03T21:26:34.545000Z
+5b613a7bf9280f31aa32d699780f7ab0
+2010-11-02T20:53:44.575041Z
+424
+mrolnik
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+25034
+
+videoForm
+dir
+
+loginForm
+dir
+
+Voip2Car.ico
+file
+
+
+
+
+2011-02-03T21:26:34.560625Z
+3f23a477d4b21a92cc4ebceb7d02acc2
+2010-10-26T19:30:26.993841Z
+423
+mrolnik
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9662
+
+keyboard
+dir
+
+connectionStatusIndicator
+dir
+
+rightMenu
+dir
+
+contactsForm
+dir
+
+background.png
+file
+
+
+
+
+2011-02-03T21:26:34.607500Z
+7455a176cefa20d3fc2928339d3870cf
+2010-08-21T18:46:34.472457Z
+405
+mrolnik
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2402
+
+chatForm
+dir
+
+whiteForm
+dir
+
+logForm
+dir
+
+callConfForm
+dir
+
+slidesForm
+dir
+
+mainForm
+dir
+
+connectingForm
+dir
+
+addForm
+dir
+
+general
+dir
+

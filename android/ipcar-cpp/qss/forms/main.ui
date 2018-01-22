@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainForm</class>
+ <widget class="QWidget" name="mainForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="main_home">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>106</y>
+     <width>55</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_gmail">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>175</y>
+     <width>55</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_facebook">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>245</y>
+     <width>55</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_twitter">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>314</y>
+     <width>55</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_gpsmenu">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>383</y>
+     <width>55</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_settings">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>453</y>
+     <width>55</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_quit">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>190</width>
+     <height>92</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_vc">
+    <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>522</y>
+     <width>55</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_back">
+   <property name="geometry">
+    <rect>
+     <x>544</x>
+     <y>94</y>
+     <width>177</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_openKeyboard">
+   <property name="geometry">
+    <rect>
+     <x>212</x>
+     <y>556</y>
+     <width>137</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_abook">
+   <property name="geometry">
+    <rect>
+     <x>13</x>
+     <y>94</y>
+     <width>179</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_log">
+   <property name="geometry">
+    <rect>
+     <x>191</x>
+     <y>94</y>
+     <width>177</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_add">
+   <property name="geometry">
+    <rect>
+     <x>367</x>
+     <y>94</y>
+     <width>177</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_missedVoice">
+   <property name="geometry">
+    <rect>
+     <x>308</x>
+     <y>30</y>
+     <width>56</width>
+     <height>58</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_missedSms">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>30</y>
+     <width>56</width>
+     <height>58</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_missedMms">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>30</y>
+     <width>56</width>
+     <height>58</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_openDialpad">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>556</y>
+     <width>136</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_username">
+   <property name="geometry">
+    <rect>
+     <x>541</x>
+     <y>65</y>
+     <width>148</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_number">
+   <property name="geometry">
+    <rect>
+     <x>541</x>
+     <y>43</y>
+     <width>148</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="main_client" native="true">
+   <property name="geometry">
+    <rect>
+     <x>13</x>
+     <y>131</y>
+     <width>707</width>
+     <height>425</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="main_missedVideo">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>30</y>
+     <width>56</width>
+     <height>58</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_version">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>0</y>
+     <width>80</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_intensity0">
+   <property name="geometry">
+    <rect>
+     <x>774</x>
+     <y>2</y>
+     <width>22</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_intensity1">
+   <property name="geometry">
+    <rect>
+     <x>774</x>
+     <y>2</y>
+     <width>22</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_intensity2">
+   <property name="geometry">
+    <rect>
+     <x>774</x>
+     <y>2</y>
+     <width>22</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_intensity4">
+   <property name="geometry">
+    <rect>
+     <x>774</x>
+     <y>2</y>
+     <width>22</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_intensity5">
+   <property name="geometry">
+    <rect>
+     <x>774</x>
+     <y>2</y>
+     <width>22</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_intensity3">
+   <property name="geometry">
+    <rect>
+     <x>774</x>
+     <y>2</y>
+     <width>22</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_offline">
+   <property name="geometry">
+    <rect>
+     <x>695</x>
+     <y>68</y>
+     <width>21</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_online">
+   <property name="geometry">
+    <rect>
+     <x>695</x>
+     <y>68</y>
+     <width>21</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="main_talking">
+   <property name="geometry">
+    <rect>
+     <x>695</x>
+     <y>68</y>
+     <width>21</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

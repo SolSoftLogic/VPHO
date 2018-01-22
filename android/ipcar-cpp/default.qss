@@ -1,0 +1,4 @@
+QWidget {
+    image: url(qss/main/background.png)
+    background-color:   black;
+}

@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/">
+        <file>IPCOM-Group.sql</file>
+
+		<file>qss/keyboard/layout.xml</file>
+		<file>qss/stylesheet.xml</file> 		
+
+		<file>qss/forms/add.ui</file>
+		<file>qss/forms/browser.ui</file>
+		<file>qss/forms/capture.ui</file>
+		<file>qss/forms/chat.ui</file>
+		<file>qss/forms/contacts.ui</file>
+		<file>qss/forms/dial.ui</file>
+		<file>qss/forms/directory.ui</file>
+		<file>qss/forms/ftp.ui</file>
+		<file>qss/forms/info.ui</file>
+		<file>qss/forms/log.ui</file>
+		<file>qss/forms/login.ui</file>
+		<file>qss/forms/main.ui</file>
+		<file>qss/forms/message.ui</file>
+		<file>qss/forms/mms.ui</file>
+		<file>qss/forms/progress.ui</file>
+		<file>qss/forms/settings/audio.ui</file>
+		<file>qss/forms/settings/call.ui</file>
+		<file>qss/forms/settings/network.ui</file>
+		<file>qss/forms/settings/video.ui</file>
+		<file>qss/forms/settings.ui</file>
+		<file>qss/forms/slides.ui</file>
+		<file>qss/forms/sms.ui</file>
+		<file>qss/forms/videoCall.ui</file>
+		<file>qss/forms/videoConf.ui</file>
+		<file>qss/forms/voiceCall.ui</file>
+		<file>qss/forms/portForward.ui</file>
+    </qresource>
+</RCC>

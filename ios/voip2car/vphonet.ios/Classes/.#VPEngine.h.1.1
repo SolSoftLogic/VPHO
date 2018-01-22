@@ -1,0 +1,62 @@
+//
+//  VPEngine.h
+//  Vphonet
+
+#import <Foundation/Foundation.h>
+
+#import "vpstack/vpstack.h" 
+#import "vpstack/sip.h"
+#import "vpstack/mixingaudio.h"
+#import "vpstack/ios/video.h"
+#import "VPLogger.h"
+
+UIKIT_EXTERN NSString *const VPEngineNotification; // always sent on main thread. userInfo contains msg, param1, param2 
+
+/// Singleton
+@interface VPEngine : NSObject {
+	VPMIXINGAUDIOFACTORY vpmixingaudiofactory;
+	VPIOSVIDEODATAFACTORY vpvideofactory;
+	IVPSTACK			*vp;
+//	VPCALL				call;
+	NSMutableSet		chats; // VPCALL => "user"
+    AOL                 aol;
+}
+
++ (VPEngine*) sharedInstance;
+
+- (int) login:(NSString*)user password:(NSString*)password;
+
+- (VPCALL) makeCall:(NSString*)user bearer:(int)bc;
+
+- (unsigned) getCallBearer:(VPCALL)call;
+
+- (int) sendSMS:(NSString*)user text:(NSString*)text;
+
+- (int) sendChatMsg:(VPCALL)call text:(NSString*)text;
+
+- (NSString*) getChatMessage:(VPCALL)call;
+
+- (int) answer:(VPCALL)vpcall;
+
+- (int) hangup:(VPCALL)vpcall;
+
+- (NSString*) getRemoteCallName:(VPCALL)vpcall;
+
+- (NSString*) reasonCodeToString:(int)reasonCode;
+
+- (NSString*) getLogonName;
+
+- (NSString*) getLogonNumber;
+
+- (void)askVpnumber:(NSString*)name;
+
+- (void) askOnline:(NSArray*)numbers;
+
+- (int) downloadAddressBook:(NSString*)filepath;
+
+- (int) hold:(VPCALL)vpcall; 
+- (int) resume:(VPCALL)vpcall;  
+- (BOOL) isHold:(VPCALL)vpcall;  
+
+
+@end

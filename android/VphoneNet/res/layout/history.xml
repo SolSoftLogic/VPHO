@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#FFFFFF">
+	<LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingRight="10dp"
+		android:gravity="center_vertical"
+		android:layout_gravity="center_vertical"
+		android:background="@drawable/topbar_history">
+		<TextView android:id="@+id/title" 
+ 			android:textSize="24dp"
+ 			android:gravity="center"
+ 			android:layout_weight="20"
+ 			android:textColor="#000000"
+ 			android:textStyle="bold"
+			android:layout_width="wrap_content" 
+			android:layout_height="fill_parent"/>
+		<Button android:id="@+id/bttrash" 
+		 	android:layout_gravity="center_vertical|right"
+		 	android:gravity="center_vertical|right"
+			android:background="@drawable/trash"
+			android:layout_weight="1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+  	</LinearLayout>
+	<ListView
+  		android:id="@+id/android:list"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content">
+	</ListView>
+</LinearLayout>

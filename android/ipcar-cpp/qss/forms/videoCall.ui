@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>videoCallForm</class>
+ <widget class="QWidget" name="videoCallForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>460</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="videoCall_video" native="true">
+   <property name="geometry">
+    <rect>
+     <x>279</x>
+     <y>97</y>
+     <width>400</width>
+     <height>300</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="videoCall_number">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>19</y>
+     <width>203</width>
+     <height>32</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="videoCall_talking">
+   <property name="geometry">
+    <rect>
+     <x>76</x>
+     <y>154</y>
+     <width>192</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>talking</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="videoCall_party">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>19</y>
+     <width>203</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>party</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="videoCall_datetime">
+   <property name="geometry">
+    <rect>
+     <x>76</x>
+     <y>96</y>
+     <width>192</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>date time</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoCall_hold">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>92</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoCall_resume">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>92</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoCall_add">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>171</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoCall_capture">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>350</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoCall_pip">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>263</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoCall_send">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>254</y>
+     <width>1</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoCall_end">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>10</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoCall_sms">
+   <property name="geometry">
+    <rect>
+     <x>322</x>
+     <y>10</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoCall_chat">
+   <property name="geometry">
+    <rect>
+     <x>381</x>
+     <y>10</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="videoCall_file">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>10</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="videoCall_me" native="true">
+   <property name="geometry">
+    <rect>
+     <x>76</x>
+     <y>253</y>
+     <width>192</width>
+     <height>144</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78126D4912F0C60300EAA2DD /* tone_generator.h in Headers */ = {isa = PBXBuildFile; fileRef = 78126D4712F0C60300EAA2DD /* tone_generator.h */; };
+		78126D4A12F0C60300EAA2DD /* tone_generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78126D4812F0C60300EAA2DD /* tone_generator.cpp */; };
+		78EA080612E8D53000E84EDD /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA07FF12E8D53000E84EDD /* CADebugMacros.cpp */; };
+		78EA080712E8D53000E84EDD /* CADebugMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 78EA080012E8D53000E84EDD /* CADebugMacros.h */; };
+		78EA080812E8D53000E84EDD /* CAMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 78EA080112E8D53000E84EDD /* CAMath.h */; };
+		78EA080912E8D53000E84EDD /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA080212E8D53000E84EDD /* CAStreamBasicDescription.cpp */; };
+		78EA080A12E8D53000E84EDD /* CAStreamBasicDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 78EA080312E8D53000E84EDD /* CAStreamBasicDescription.h */; };
+		78EA080B12E8D53000E84EDD /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA080412E8D53000E84EDD /* CAXException.cpp */; };
+		78EA080C12E8D53000E84EDD /* CAXException.h in Headers */ = {isa = PBXBuildFile; fileRef = 78EA080512E8D53000E84EDD /* CAXException.h */; };
+		78EA081212E8D53F00E84EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78EA081112E8D53F00E84EDD /* Foundation.framework */; };
+		9468A1C613087C5600F1473A /* avc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9468A1BF13087C5600F1473A /* avc.cpp */; };
+		9468A1C713087C5600F1473A /* codecstest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9468A1C113087C5600F1473A /* codecstest.cpp */; };
+		9468A1C813087C5600F1473A /* videocodecs.h in Headers */ = {isa = PBXBuildFile; fileRef = 9468A1C213087C5600F1473A /* videocodecs.h */; };
+		94DADF8413087B1A007D274F /* video.h in Headers */ = {isa = PBXBuildFile; fileRef = 94DADF8213087B1A007D274F /* video.h */; };
+		94DADF8513087B1A007D274F /* video.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94DADF8313087B1A007D274F /* video.mm */; };
+		AA747D9F0F9514B9006C5449 /* vpstack_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* vpstack_Prefix.pch */; };
+		D12ECDBC12B468CA007DAA25 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12ECDBB12B468CA007DAA25 /* AudioToolbox.framework */; };
+		D16B1C5D12B3C49F003AC8A4 /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C4612B3C49F003AC8A4 /* aes.c */; };
+		D16B1C5E12B3C49F003AC8A4 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C4712B3C49F003AC8A4 /* aes.h */; };
+		D16B1C5F12B3C49F003AC8A4 /* audiocodecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C4812B3C49F003AC8A4 /* audiocodecs.cpp */; };
+		D16B1C6012B3C49F003AC8A4 /* audiocodecs.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C4912B3C49F003AC8A4 /* audiocodecs.h */; };
+		D16B1C6112B3C49F003AC8A4 /* audioutil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C4A12B3C49F003AC8A4 /* audioutil.cpp */; };
+		D16B1C6212B3C49F003AC8A4 /* audioutil.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C4B12B3C49F003AC8A4 /* audioutil.h */; };
+		D16B1C6312B3C49F003AC8A4 /* avifile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C4C12B3C49F003AC8A4 /* avifile.cpp */; };
+		D16B1C6412B3C49F003AC8A4 /* avifile.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C4D12B3C49F003AC8A4 /* avifile.h */; };
+		D16B1C6B12B3C49F003AC8A4 /* filters.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C5412B3C49F003AC8A4 /* filters.h */; };
+		D16B1C6C12B3C49F003AC8A4 /* g711.c in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C5512B3C49F003AC8A4 /* g711.c */; };
+		D16B1C6D12B3C49F003AC8A4 /* g711.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C5612B3C49F003AC8A4 /* g711.h */; };
+		D16B1C6E12B3C49F003AC8A4 /* gsm.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C5712B3C49F003AC8A4 /* gsm.h */; };
+		D16B1C7112B3C49F003AC8A4 /* gsmtrans.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C5A12B3C49F003AC8A4 /* gsmtrans.cpp */; };
+		D16B1C7212B3C49F003AC8A4 /* ielements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C5B12B3C49F003AC8A4 /* ielements.cpp */; };
+		D16B1C7312B3C49F003AC8A4 /* ielements.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C5C12B3C49F003AC8A4 /* ielements.h */; };
+		D16B1C9512B3C4E0003AC8A4 /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C7612B3C4E0003AC8A4 /* md5.h */; };
+		D16B1C9612B3C4E0003AC8A4 /* md5c.c in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C7712B3C4E0003AC8A4 /* md5c.c */; };
+		D16B1C9812B3C4E0003AC8A4 /* mixingaudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C7912B3C4E0003AC8A4 /* mixingaudio.cpp */; };
+		D16B1C9912B3C4E0003AC8A4 /* mixingaudio.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C7A12B3C4E0003AC8A4 /* mixingaudio.h */; };
+		D16B1C9A12B3C4E0003AC8A4 /* neterror.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C7B12B3C4E0003AC8A4 /* neterror.h */; };
+		D16B1C9B12B3C4E0003AC8A4 /* netutil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C7C12B3C4E0003AC8A4 /* netutil.cpp */; };
+		D16B1C9C12B3C4E0003AC8A4 /* netutil.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C7D12B3C4E0003AC8A4 /* netutil.h */; };
+		D16B1C9D12B3C4E0003AC8A4 /* pdu.c in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C7E12B3C4E0003AC8A4 /* pdu.c */; };
+		D16B1C9E12B3C4E0003AC8A4 /* pdu.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C7F12B3C4E0003AC8A4 /* pdu.h */; };
+		D16B1C9F12B3C4E0003AC8A4 /* portability.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C8012B3C4E0003AC8A4 /* portability.h */; };
+		D16B1CA012B3C4E0003AC8A4 /* resample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C8112B3C4E0003AC8A4 /* resample.cpp */; };
+		D16B1CA112B3C4E0003AC8A4 /* rtfdictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C8212B3C4E0003AC8A4 /* rtfdictionary.h */; };
+		D16B1CA212B3C4E0003AC8A4 /* serialport.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C8312B3C4E0003AC8A4 /* serialport.h */; };
+		D16B1CA512B3C4E0003AC8A4 /* sip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C8612B3C4E0003AC8A4 /* sip.cpp */; };
+		D16B1CA612B3C4E0003AC8A4 /* sip.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C8712B3C4E0003AC8A4 /* sip.h */; };
+		D16B1CA912B3C4E0003AC8A4 /* udpstream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C8A12B3C4E0003AC8A4 /* udpstream.cpp */; };
+		D16B1CAA12B3C4E0003AC8A4 /* udpstream.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C8B12B3C4E0003AC8A4 /* udpstream.h */; };
+		D16B1CAB12B3C4E0003AC8A4 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C8C12B3C4E0003AC8A4 /* util.cpp */; };
+		D16B1CAC12B3C4E0003AC8A4 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C8D12B3C4E0003AC8A4 /* util.h */; };
+		D16B1CAD12B3C4E0003AC8A4 /* vpaudio.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C8E12B3C4E0003AC8A4 /* vpaudio.h */; };
+		D16B1CAE12B3C4E0003AC8A4 /* vprotocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C8F12B3C4E0003AC8A4 /* vprotocol.h */; };
+		D16B1CAF12B3C4E0003AC8A4 /* vpstack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16B1C9012B3C4E0003AC8A4 /* vpstack.cpp */; };
+		D16B1CB012B3C4E0003AC8A4 /* vpstack.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C9112B3C4E0003AC8A4 /* vpstack.h */; };
+		D16B1CB112B3C4E0003AC8A4 /* vpstackpriv.h in Headers */ = {isa = PBXBuildFile; fileRef = D16B1C9212B3C4E0003AC8A4 /* vpstackpriv.h */; };
+		D191DB5D12C7856D006AB04B /* libgsmlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D191DB5C12C7853A006AB04B /* libgsmlib.a */; };
+		D191DB7112C785B0006AB04B /* libavc_h264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D191DB7012C785AD006AB04B /* libavc_h264.a */; };
+		D1E671FF12B423A9009F1BC4 /* audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1E671FB12B423A9009F1BC4 /* audio.cpp */; };
+		D1E6720012B423A9009F1BC4 /* audio.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E671FC12B423A9009F1BC4 /* audio.h */; };
+		D1E6720112B423A9009F1BC4 /* iosportability.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E671FD12B423A9009F1BC4 /* iosportability.h */; };
+		D1E6720212B423A9009F1BC4 /* portability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1E671FE12B423A9009F1BC4 /* portability.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D191DB5B12C7853A006AB04B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D191DB5712C7853A006AB04B /* gsmlib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = gsmlib;
+		};
+		D191DB6F12C785AD006AB04B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D191DB6812C785AD006AB04B /* avc_h264.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = avc_h264;
+		};
+		E78AB10112D6465500C56003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D191DB5712C7853A006AB04B /* gsmlib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = gsmlib;
+		};
+		E78AB10312D6465900C56003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D191DB6812C785AD006AB04B /* avc_h264.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = avc_h264;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		78126D4712F0C60300EAA2DD /* tone_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tone_generator.h; sourceTree = "<group>"; };
+		78126D4812F0C60300EAA2DD /* tone_generator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tone_generator.cpp; sourceTree = "<group>"; };
+		78EA07FF12E8D53000E84EDD /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		78EA080012E8D53000E84EDD /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		78EA080112E8D53000E84EDD /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		78EA080212E8D53000E84EDD /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		78EA080312E8D53000E84EDD /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		78EA080412E8D53000E84EDD /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		78EA080512E8D53000E84EDD /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		78EA081112E8D53F00E84EDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9468A1BF13087C5600F1473A /* avc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = avc.cpp; sourceTree = "<group>"; };
+		9468A1C113087C5600F1473A /* codecstest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = codecstest.cpp; sourceTree = "<group>"; };
+		9468A1C213087C5600F1473A /* videocodecs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videocodecs.h; sourceTree = "<group>"; };
+		94DADF8213087B1A007D274F /* video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video.h; sourceTree = "<group>"; };
+		94DADF8313087B1A007D274F /* video.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = video.mm; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* vpstack_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpstack_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		D12ECDBB12B468CA007DAA25 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		D16B1C4612B3C49F003AC8A4 /* aes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aes.c; path = ../aes.c; sourceTree = SOURCE_ROOT; };
+		D16B1C4712B3C49F003AC8A4 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aes.h; path = ../aes.h; sourceTree = SOURCE_ROOT; };
+		D16B1C4812B3C49F003AC8A4 /* audiocodecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = audiocodecs.cpp; path = ../audiocodecs.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C4912B3C49F003AC8A4 /* audiocodecs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = audiocodecs.h; path = ../audiocodecs.h; sourceTree = SOURCE_ROOT; };
+		D16B1C4A12B3C49F003AC8A4 /* audioutil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = audioutil.cpp; path = ../audioutil.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C4B12B3C49F003AC8A4 /* audioutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = audioutil.h; path = ../audioutil.h; sourceTree = SOURCE_ROOT; };
+		D16B1C4C12B3C49F003AC8A4 /* avifile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = avifile.cpp; path = ../avifile.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C4D12B3C49F003AC8A4 /* avifile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = avifile.h; path = ../avifile.h; sourceTree = SOURCE_ROOT; };
+		D16B1C5312B3C49F003AC8A4 /* consolevp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = consolevp.cpp; path = ../consolevp.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C5412B3C49F003AC8A4 /* filters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filters.h; path = ../filters.h; sourceTree = SOURCE_ROOT; };
+		D16B1C5512B3C49F003AC8A4 /* g711.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g711.c; path = ../g711.c; sourceTree = SOURCE_ROOT; };
+		D16B1C5612B3C49F003AC8A4 /* g711.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = g711.h; path = ../g711.h; sourceTree = SOURCE_ROOT; };
+		D16B1C5712B3C49F003AC8A4 /* gsm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gsm.h; path = ../gsm.h; sourceTree = SOURCE_ROOT; };
+		D16B1C5A12B3C49F003AC8A4 /* gsmtrans.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gsmtrans.cpp; path = ../gsmtrans.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C5B12B3C49F003AC8A4 /* ielements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ielements.cpp; path = ../ielements.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C5C12B3C49F003AC8A4 /* ielements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ielements.h; path = ../ielements.h; sourceTree = SOURCE_ROOT; };
+		D16B1C7612B3C4E0003AC8A4 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = md5.h; path = ../md5.h; sourceTree = SOURCE_ROOT; };
+		D16B1C7712B3C4E0003AC8A4 /* md5c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = md5c.c; path = ../md5c.c; sourceTree = SOURCE_ROOT; };
+		D16B1C7912B3C4E0003AC8A4 /* mixingaudio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mixingaudio.cpp; path = ../mixingaudio.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C7A12B3C4E0003AC8A4 /* mixingaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mixingaudio.h; path = ../mixingaudio.h; sourceTree = SOURCE_ROOT; };
+		D16B1C7B12B3C4E0003AC8A4 /* neterror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = neterror.h; path = ../neterror.h; sourceTree = SOURCE_ROOT; };
+		D16B1C7C12B3C4E0003AC8A4 /* netutil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = netutil.cpp; path = ../netutil.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C7D12B3C4E0003AC8A4 /* netutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = netutil.h; path = ../netutil.h; sourceTree = SOURCE_ROOT; };
+		D16B1C7E12B3C4E0003AC8A4 /* pdu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pdu.c; path = ../pdu.c; sourceTree = SOURCE_ROOT; };
+		D16B1C7F12B3C4E0003AC8A4 /* pdu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pdu.h; path = ../pdu.h; sourceTree = SOURCE_ROOT; };
+		D16B1C8012B3C4E0003AC8A4 /* portability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = portability.h; path = ../portability.h; sourceTree = SOURCE_ROOT; };
+		D16B1C8112B3C4E0003AC8A4 /* resample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = resample.cpp; path = ../resample.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C8212B3C4E0003AC8A4 /* rtfdictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtfdictionary.h; path = ../rtfdictionary.h; sourceTree = SOURCE_ROOT; };
+		D16B1C8312B3C4E0003AC8A4 /* serialport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = serialport.h; path = ../serialport.h; sourceTree = SOURCE_ROOT; };
+		D16B1C8612B3C4E0003AC8A4 /* sip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sip.cpp; path = ../sip.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C8712B3C4E0003AC8A4 /* sip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sip.h; path = ../sip.h; sourceTree = SOURCE_ROOT; };
+		D16B1C8A12B3C4E0003AC8A4 /* udpstream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = udpstream.cpp; path = ../udpstream.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C8B12B3C4E0003AC8A4 /* udpstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = udpstream.h; path = ../udpstream.h; sourceTree = SOURCE_ROOT; };
+		D16B1C8C12B3C4E0003AC8A4 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = util.cpp; path = ../util.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C8D12B3C4E0003AC8A4 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = ../util.h; sourceTree = SOURCE_ROOT; };
+		D16B1C8E12B3C4E0003AC8A4 /* vpaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vpaudio.h; path = ../vpaudio.h; sourceTree = SOURCE_ROOT; };
+		D16B1C8F12B3C4E0003AC8A4 /* vprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vprotocol.h; path = ../vprotocol.h; sourceTree = SOURCE_ROOT; };
+		D16B1C9012B3C4E0003AC8A4 /* vpstack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vpstack.cpp; path = ../vpstack.cpp; sourceTree = SOURCE_ROOT; };
+		D16B1C9112B3C4E0003AC8A4 /* vpstack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vpstack.h; path = ../vpstack.h; sourceTree = SOURCE_ROOT; };
+		D16B1C9212B3C4E0003AC8A4 /* vpstackpriv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vpstackpriv.h; path = ../vpstackpriv.h; sourceTree = SOURCE_ROOT; };
+		D191DB5712C7853A006AB04B /* gsmlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gsmlib.xcodeproj; path = ../../gsmlib/ios/gsmlib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		D191DB6812C785AD006AB04B /* avc_h264.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = avc_h264.xcodeproj; path = ../../avc_h264/ios/avc_h264.xcodeproj; sourceTree = SOURCE_ROOT; };
+		D1E671FB12B423A9009F1BC4 /* audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audio.cpp; sourceTree = "<group>"; };
+		D1E671FC12B423A9009F1BC4 /* audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio.h; sourceTree = "<group>"; };
+		D1E671FD12B423A9009F1BC4 /* iosportability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iosportability.h; sourceTree = "<group>"; };
+		D1E671FE12B423A9009F1BC4 /* portability.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = portability.cpp; sourceTree = "<group>"; };
+		D2AAC07E0554694100DB518D /* libvpstack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libvpstack.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D12ECDBC12B468CA007DAA25 /* AudioToolbox.framework in Frameworks */,
+				D191DB5D12C7856D006AB04B /* libgsmlib.a in Frameworks */,
+				D191DB7112C785B0006AB04B /* libavc_h264.a in Frameworks */,
+				78EA081212E8D53F00E84EDD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libvpstack.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* vpstack */ = {
+			isa = PBXGroup;
+			children = (
+				9468A1BE13087C5600F1473A /* codecs */,
+				D191DB6812C785AD006AB04B /* avc_h264.xcodeproj */,
+				D191DB5712C7853A006AB04B /* gsmlib.xcodeproj */,
+				D1E671FA12B42395009F1BC4 /* ios */,
+				D16B1C7612B3C4E0003AC8A4 /* md5.h */,
+				D16B1C7712B3C4E0003AC8A4 /* md5c.c */,
+				D16B1C7912B3C4E0003AC8A4 /* mixingaudio.cpp */,
+				D16B1C7A12B3C4E0003AC8A4 /* mixingaudio.h */,
+				D16B1C7B12B3C4E0003AC8A4 /* neterror.h */,
+				D16B1C7C12B3C4E0003AC8A4 /* netutil.cpp */,
+				D16B1C7D12B3C4E0003AC8A4 /* netutil.h */,
+				D16B1C7E12B3C4E0003AC8A4 /* pdu.c */,
+				D16B1C7F12B3C4E0003AC8A4 /* pdu.h */,
+				D16B1C8012B3C4E0003AC8A4 /* portability.h */,
+				D16B1C8112B3C4E0003AC8A4 /* resample.cpp */,
+				D16B1C8212B3C4E0003AC8A4 /* rtfdictionary.h */,
+				D16B1C8312B3C4E0003AC8A4 /* serialport.h */,
+				D16B1C8612B3C4E0003AC8A4 /* sip.cpp */,
+				D16B1C8712B3C4E0003AC8A4 /* sip.h */,
+				D16B1C8A12B3C4E0003AC8A4 /* udpstream.cpp */,
+				D16B1C8B12B3C4E0003AC8A4 /* udpstream.h */,
+				D16B1C8C12B3C4E0003AC8A4 /* util.cpp */,
+				D16B1C8D12B3C4E0003AC8A4 /* util.h */,
+				D16B1C8E12B3C4E0003AC8A4 /* vpaudio.h */,
+				D16B1C8F12B3C4E0003AC8A4 /* vprotocol.h */,
+				D16B1C9012B3C4E0003AC8A4 /* vpstack.cpp */,
+				D16B1C9112B3C4E0003AC8A4 /* vpstack.h */,
+				D16B1C9212B3C4E0003AC8A4 /* vpstackpriv.h */,
+				D16B1C4612B3C49F003AC8A4 /* aes.c */,
+				D16B1C4712B3C49F003AC8A4 /* aes.h */,
+				D16B1C4812B3C49F003AC8A4 /* audiocodecs.cpp */,
+				D16B1C4912B3C49F003AC8A4 /* audiocodecs.h */,
+				D16B1C4A12B3C49F003AC8A4 /* audioutil.cpp */,
+				D16B1C4B12B3C49F003AC8A4 /* audioutil.h */,
+				D16B1C4C12B3C49F003AC8A4 /* avifile.cpp */,
+				D16B1C4D12B3C49F003AC8A4 /* avifile.h */,
+				D16B1C5312B3C49F003AC8A4 /* consolevp.cpp */,
+				D16B1C5412B3C49F003AC8A4 /* filters.h */,
+				D16B1C5512B3C49F003AC8A4 /* g711.c */,
+				D16B1C5612B3C49F003AC8A4 /* g711.h */,
+				D16B1C5712B3C49F003AC8A4 /* gsm.h */,
+				D16B1C5A12B3C49F003AC8A4 /* gsmtrans.cpp */,
+				D16B1C5B12B3C49F003AC8A4 /* ielements.cpp */,
+				D16B1C5C12B3C49F003AC8A4 /* ielements.h */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = vpstack;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D12ECDBB12B468CA007DAA25 /* AudioToolbox.framework */,
+				78EA081112E8D53F00E84EDD /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				78EA07FE12E8D53000E84EDD /* iPublicUtility */,
+				AA747D9E0F9514B9006C5449 /* vpstack_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		78EA07FE12E8D53000E84EDD /* iPublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				78EA07FF12E8D53000E84EDD /* CADebugMacros.cpp */,
+				78EA080012E8D53000E84EDD /* CADebugMacros.h */,
+				78EA080112E8D53000E84EDD /* CAMath.h */,
+				78EA080212E8D53000E84EDD /* CAStreamBasicDescription.cpp */,
+				78EA080312E8D53000E84EDD /* CAStreamBasicDescription.h */,
+				78EA080412E8D53000E84EDD /* CAXException.cpp */,
+				78EA080512E8D53000E84EDD /* CAXException.h */,
+			);
+			path = iPublicUtility;
+			sourceTree = "<group>";
+		};
+		9468A1BE13087C5600F1473A /* codecs */ = {
+			isa = PBXGroup;
+			children = (
+				9468A1BF13087C5600F1473A /* avc.cpp */,
+				9468A1C113087C5600F1473A /* codecstest.cpp */,
+				9468A1C213087C5600F1473A /* videocodecs.h */,
+			);
+			name = codecs;
+			path = ../../codecs;
+			sourceTree = SOURCE_ROOT;
+		};
+		D191DB5812C7853A006AB04B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D191DB5C12C7853A006AB04B /* libgsmlib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D191DB6912C785AD006AB04B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D191DB7012C785AD006AB04B /* libavc_h264.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1E671FA12B42395009F1BC4 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				94DADF8213087B1A007D274F /* video.h */,
+				94DADF8313087B1A007D274F /* video.mm */,
+				D1E671FB12B423A9009F1BC4 /* audio.cpp */,
+				D1E671FC12B423A9009F1BC4 /* audio.h */,
+				D1E671FD12B423A9009F1BC4 /* iosportability.h */,
+				D1E671FE12B423A9009F1BC4 /* portability.cpp */,
+				78126D4712F0C60300EAA2DD /* tone_generator.h */,
+				78126D4812F0C60300EAA2DD /* tone_generator.cpp */,
+			);
+			name = ios;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* vpstack_Prefix.pch in Headers */,
+				D16B1C5E12B3C49F003AC8A4 /* aes.h in Headers */,
+				D16B1C6012B3C49F003AC8A4 /* audiocodecs.h in Headers */,
+				D16B1C6212B3C49F003AC8A4 /* audioutil.h in Headers */,
+				D16B1C6412B3C49F003AC8A4 /* avifile.h in Headers */,
+				D16B1C6B12B3C49F003AC8A4 /* filters.h in Headers */,
+				D16B1C6D12B3C49F003AC8A4 /* g711.h in Headers */,
+				D16B1C6E12B3C49F003AC8A4 /* gsm.h in Headers */,
+				D16B1C7312B3C49F003AC8A4 /* ielements.h in Headers */,
+				D16B1C9512B3C4E0003AC8A4 /* md5.h in Headers */,
+				D16B1C9912B3C4E0003AC8A4 /* mixingaudio.h in Headers */,
+				D16B1C9A12B3C4E0003AC8A4 /* neterror.h in Headers */,
+				D16B1C9C12B3C4E0003AC8A4 /* netutil.h in Headers */,
+				D16B1C9E12B3C4E0003AC8A4 /* pdu.h in Headers */,
+				D16B1C9F12B3C4E0003AC8A4 /* portability.h in Headers */,
+				D16B1CA112B3C4E0003AC8A4 /* rtfdictionary.h in Headers */,
+				D16B1CA212B3C4E0003AC8A4 /* serialport.h in Headers */,
+				D16B1CA612B3C4E0003AC8A4 /* sip.h in Headers */,
+				D16B1CAA12B3C4E0003AC8A4 /* udpstream.h in Headers */,
+				D16B1CAC12B3C4E0003AC8A4 /* util.h in Headers */,
+				D16B1CAD12B3C4E0003AC8A4 /* vpaudio.h in Headers */,
+				D16B1CAE12B3C4E0003AC8A4 /* vprotocol.h in Headers */,
+				D16B1CB012B3C4E0003AC8A4 /* vpstack.h in Headers */,
+				D16B1CB112B3C4E0003AC8A4 /* vpstackpriv.h in Headers */,
+				D1E6720012B423A9009F1BC4 /* audio.h in Headers */,
+				D1E6720112B423A9009F1BC4 /* iosportability.h in Headers */,
+				78EA080712E8D53000E84EDD /* CADebugMacros.h in Headers */,
+				78EA080812E8D53000E84EDD /* CAMath.h in Headers */,
+				78EA080A12E8D53000E84EDD /* CAStreamBasicDescription.h in Headers */,
+				78EA080C12E8D53000E84EDD /* CAXException.h in Headers */,
+				78126D4912F0C60300EAA2DD /* tone_generator.h in Headers */,
+				94DADF8413087B1A007D274F /* video.h in Headers */,
+				9468A1C813087C5600F1473A /* videocodecs.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* vpstack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "vpstack" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E78AB10212D6465500C56003 /* PBXTargetDependency */,
+				E78AB10412D6465900C56003 /* PBXTargetDependency */,
+			);
+			name = vpstack;
+			productName = vpstack;
+			productReference = D2AAC07E0554694100DB518D /* libvpstack.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "vpstack" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* vpstack */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D191DB6912C785AD006AB04B /* Products */;
+					ProjectRef = D191DB6812C785AD006AB04B /* avc_h264.xcodeproj */;
+				},
+				{
+					ProductGroup = D191DB5812C7853A006AB04B /* Products */;
+					ProjectRef = D191DB5712C7853A006AB04B /* gsmlib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* vpstack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D191DB5C12C7853A006AB04B /* libgsmlib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgsmlib.a;
+			remoteRef = D191DB5B12C7853A006AB04B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D191DB7012C785AD006AB04B /* libavc_h264.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libavc_h264.a;
+			remoteRef = D191DB6F12C785AD006AB04B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D16B1C5D12B3C49F003AC8A4 /* aes.c in Sources */,
+				D16B1C5F12B3C49F003AC8A4 /* audiocodecs.cpp in Sources */,
+				D16B1C6112B3C49F003AC8A4 /* audioutil.cpp in Sources */,
+				D16B1C6312B3C49F003AC8A4 /* avifile.cpp in Sources */,
+				D16B1C6C12B3C49F003AC8A4 /* g711.c in Sources */,
+				D16B1C7112B3C49F003AC8A4 /* gsmtrans.cpp in Sources */,
+				D16B1C7212B3C49F003AC8A4 /* ielements.cpp in Sources */,
+				D16B1C9612B3C4E0003AC8A4 /* md5c.c in Sources */,
+				D16B1C9812B3C4E0003AC8A4 /* mixingaudio.cpp in Sources */,
+				D16B1C9B12B3C4E0003AC8A4 /* netutil.cpp in Sources */,
+				D16B1C9D12B3C4E0003AC8A4 /* pdu.c in Sources */,
+				D16B1CA012B3C4E0003AC8A4 /* resample.cpp in Sources */,
+				D16B1CA512B3C4E0003AC8A4 /* sip.cpp in Sources */,
+				D16B1CA912B3C4E0003AC8A4 /* udpstream.cpp in Sources */,
+				D16B1CAB12B3C4E0003AC8A4 /* util.cpp in Sources */,
+				D16B1CAF12B3C4E0003AC8A4 /* vpstack.cpp in Sources */,
+				D1E671FF12B423A9009F1BC4 /* audio.cpp in Sources */,
+				D1E6720212B423A9009F1BC4 /* portability.cpp in Sources */,
+				78EA080612E8D53000E84EDD /* CADebugMacros.cpp in Sources */,
+				78EA080912E8D53000E84EDD /* CAStreamBasicDescription.cpp in Sources */,
+				78EA080B12E8D53000E84EDD /* CAXException.cpp in Sources */,
+				78126D4A12F0C60300EAA2DD /* tone_generator.cpp in Sources */,
+				94DADF8513087B1A007D274F /* video.mm in Sources */,
+				9468A1C613087C5600F1473A /* avc.cpp in Sources */,
+				9468A1C713087C5600F1473A /* codecstest.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E78AB10212D6465500C56003 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = gsmlib;
+			targetProxy = E78AB10112D6465500C56003 /* PBXContainerItemProxy */;
+		};
+		E78AB10412D6465900C56003 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = avc_h264;
+			targetProxy = E78AB10312D6465900C56003 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/vpstack.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = vpstack_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TARGET_OS_IPHONE=1",
+					DEBUGLOG,
+					INCLUDEAVC,
+					WAV49,
+				);
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = vpstack;
+				SDKROOT = iphoneos;
+				SEPARATE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/vpstack.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = vpstack_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TARGET_OS_IPHONE=1",
+					DEBUGLOG,
+					INCLUDEAVC,
+					WAV49,
+				);
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = vpstack;
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					INCLUDEAVC,
+					WAV49,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../avc_h264/dec/include/,
+					../../avc_h264/colorconvert/include,
+					../../avc_h264/enc/include/,
+					../../avc_h264/common/include/,
+					../../avc_h264/enc/src/,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SASR = YES;
+				SDKROOT = iphoneos4.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WAV49 = YES;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					INCLUDEAVC,
+					WAV49,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../avc_h264/dec/include/,
+					../../avc_h264/colorconvert/include,
+					../../avc_h264/enc/include/,
+					../../avc_h264/common/include/,
+					../../avc_h264/enc/src/,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "vpstack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "vpstack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

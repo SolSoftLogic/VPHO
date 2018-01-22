@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/illustrationsearch">
+	<LinearLayout 
+		android:layout_weight="0"
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical|center"
+		android:padding="10dp"
+		android:background="@drawable/searchdir">
+	</LinearLayout>
+	<TextView android:id="@+id/pleyouphnu" 
+ 		android:textSize="16dp"
+ 		android:textColor="#000000"
+  		android:text="@string/yocasena" 
+		android:layout_width="fill_parent" 
+		android:padding="10dp"
+		android:layout_height="wrap_content"/>	
+	<LinearLayout android:id="@+id/mainl" 
+  		android:orientation="vertical"
+ 		android:paddingLeft="10dp"
+ 		android:paddingRight="10dp"
+  		android:layout_width="fill_parent"
+   		android:layout_height="wrap_content">
+		<LinearLayout android:id="@+id/butto" 
+  			android:orientation="vertical"
+  			android:layout_width="fill_parent"
+   			android:layout_height="wrap_content">
+			<Button 
+				android:textColor="#222222"
+				android:background="@drawable/button_search"
+				android:textSize="18px"
+				android:id="@+id/btsearch" 
+				android:paddingTop="10dp"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"/>
+		</LinearLayout>
+	</LinearLayout>
+	<TextView android:id="@+id/pleyouza" 
+ 		android:textSize="16dp"
+ 		android:textColor="#000000"
+  		android:text="@string/allyocolfr" 
+		android:layout_width="fill_parent" 
+		android:padding="10dp"
+		android:layout_height="wrap_content"/>	
+	<LinearLayout android:id="@+id/buttona" 
+  		android:orientation="vertical"
+  		android:paddingLeft="10dp"
+  		android:paddingRight="10dp"
+  		android:layout_width="fill_parent"
+   		android:layout_height="wrap_content">
+		<Button 
+			android:textColor="#222222"
+			android:background="@drawable/buttongreyinovation"
+			android:textSize="18px"
+			android:id="@+id/btnvite" 
+			android:paddingTop="10dp"
+			android:layout_width="fill_parent"
+			android:layout_height="50dp"/>
+	</LinearLayout>	
+</LinearLayout>

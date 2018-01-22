@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" > 
+	<TextView
+		android:id="@+id/stPhone"
+		android:layout_width="wrap_content" 
+    	android:layout_height="fill_parent"
+    	android:paddingRight="10dp"
+    	android:textSize="18dp"
+    	android:textStyle="bold"
+    	android:textColor="#000000"
+    	android:gravity="right"
+		android:singleLine="true"
+		android:layout_toRightOf="@+id/stCountry"
+		android:layout_alignBaseline="@id/stCountry"
+		android:layout_alignParentRight="true"
+		android:text="empty line"/>  	
+	<TextView
+		android:id="@+id/stCountry"
+		android:layout_width="wrap_content" 
+    	android:layout_height="fill_parent"
+    	android:textColor="#000000"
+    	android:textSize="18dp"
+    	android:textStyle="bold"
+    	android:singleLine="true"
+    	android:layout_toRightOf="@+id/flag"
+    	android:layout_alignBaseline="@id/flag"
+		android:text="empty line"/>
+    <ImageView
+        android:id="@+id/flag"
+  		android:layout_height="32dp" 
+    	android:layout_width="32dp"
+    	android:paddingLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ad"/>
+</RelativeLayout>
+

@@ -1,0 +1,631 @@
+//
+//  VPEngine.mm
+//  Vphonet
+
+#import "VPEngine.h"
+
+NSString *const VPEngineNotification      = @"VPEngineNotification";
+//NSString *const VPEngineAsyncNotification = @"VPEngineAsyncNotification"; 
+
+@implementation VPEngine
+
+static VPEngine *vphonetEngineSharedInstance = nil;
+
+void VPRoutineNotify(void *param, unsigned msg, unsigned param1, unsigned param2);
+int VPRoutineSyncNotify(void *uparam, unsigned msg, unsigned param1, unsigned param2);
+
+#pragma mark ---- VPEngine singleton object methods ----
+
++ (VPEngine*)sharedInstance 
+{
+	@synchronized(self) 
+	{
+		if (vphonetEngineSharedInstance == nil) 
+		{
+			[[self alloc] init]; // assignment not done here
+			VPInit();
+			VPMIXINGAUDIO_Init();
+		}
+	}
+	return vphonetEngineSharedInstance;
+}
+
++ (id)allocWithZone:(NSZone *)zone 
+{
+	@synchronized(self) 
+	{
+		if (vphonetEngineSharedInstance == nil) 
+		{
+			vphonetEngineSharedInstance= [super allocWithZone:zone];
+			return vphonetEngineSharedInstance;  // assignment and return on first allocation
+		}
+	}
+	return nil; // on subsequent allocation attempts return nil
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+	return self;
+}
+
+- (id)retain 
+{
+	return self;
+}
+
+- (unsigned)retainCount 
+{
+	return UINT_MAX;  // denotes an object that cannot be released
+}
+
+- (void)release 
+{
+	//do nothing
+}
+
+- (id)autorelease 
+{
+	return self;
+}
+
+#pragma mark ---- VPEngine object methods ----
+
+- (id) init
+{
+    self = [super init];
+    
+    return self;
+}
+
+- (int) login:(NSString*)user password:(NSString*)password
+{
+	if(vp) {
+#if !TARGET_IPHONE_SIMULATOR
+		[[Camcorder sharedInstance] setVPSTACK:0];
+#endif	
+		delete vp;
+	}
+	
+	vp = CreateVPSTACK(&vpmixingaudiofactory/*, 0, &vpvideofactory*/);
+	vp->SetVideoDataFactory(&vpvideofactory);
+	
+	vp->SetNotifyRoutine(VPRoutineNotify, 0);
+	vp->SetSyncNotifyRoutine(VPRoutineSyncNotify, 0);
+	
+	if(vp->Init()) {
+		VP_LOG_MSG(VP_LOG_ERROR, @"Cannot initialize vphone stack");
+		delete vp;
+		vp = 0;
+		return 0;
+	}
+	
+	vp->SetSupportedBearersMask((1<<BC_VOICE) | (1<<BC_SMS) | (1<<BC_AUDIOVIDEO) | (1<<BC_CHAT) | (1<<BC_FILE));
+	
+	VP_LOG_MSG(VP_LOG_DEBUG, @"Logging on as %@", user);
+	vp->Logon([user UTF8String], [password UTF8String]);
+	
+#if !TARGET_IPHONE_SIMULATOR
+	[[Camcorder sharedInstance] setVPSTACK:vp];
+#endif	
+	
+	return 0;
+}
+
+- (NSString*)vpError:(int)error {
+	
+	static NSString *errors[14] = {
+		@"Invalid call",	@"No more calls available",		@"TCP/IP error",
+		@"Invalid address", @"Calling yourself",			@"Invalid status", 
+		@"Not logged on",	@"Incompatible calls",			@"File not found", 
+		@"Invalid file format", @"Unsupported call",		@"Unsupported bearer", 
+		@"Invalid parameter",	@"Timeout"
+	};
+	
+	if(error >= -14 && error <= -1)
+		return errors[-error - 1];
+	return @"Unknown";
+}
+
+- (VPCALL) makeCall:(NSString*)user bearer:(int)bc
+{
+    VPCALL call = 0;
+    if (vp != NULL) 
+    {
+		int rc;
+        rc = vp->Connect(&call, [user UTF8String], bc);		
+        
+		if(!rc) {
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Connecting call %d", (int)call);
+		} else {
+			VP_LOG_MSG(VP_LOG_ERROR, @"Error: %@", [self vpError:rc]);
+            return 0;
+		}
+	}
+   
+	return call;
+}
+
+- (unsigned) getCallBearer:(VPCALL)call
+{
+    if (!vp) return 0;
+
+    return vp->GetCallBearer(call);
+}
+
+- (int) sendSMS:(NSString*)user text:(NSString*)text
+{
+	return 0;
+}
+
+- (int) sendChatMsg:(VPCALL)call text:(NSString*)text
+{
+    int rc = vp->SendChat(call, [text cStringUsingEncoding:NSUTF8StringEncoding]);
+    if (!rc) 
+    {
+        VP_LOG_MSG(VP_LOG_DEBUG, @"Send chat message %@ to %d", text, (int)call);
+    }
+    else 
+    {
+		VP_LOG_MSG(VP_LOG_ERROR, @"Error sending chat: %@", [self vpError:rc]);
+    }
+    
+	return rc;
+}
+
+- (NSString*) getChatMessage:(VPCALL)call
+{
+    if (!vp) return nil;
+    char s[300] = {'\0'};
+    
+    vp->GetChatText(call, s, 300);
+    
+    return [NSString stringWithCString:s encoding:NSUTF8StringEncoding];
+    
+}
+
+- (int) answer:(VPCALL)vpcall
+{
+	if (vp)
+		vp->AnswerCall(vpcall);
+	return 0;
+}
+
+- (int) hangup:(VPCALL)vpcall
+{
+	if (vp != NULL) 
+	{
+		vp->Disconnect(vpcall, REASON_NORMAL);
+	} 
+	
+	return 0;
+}
+
+- (int) hold:(VPCALL)vpcall
+{
+	if (vp) 
+	{
+		vp->Hold(vpcall);
+		
+	} 
+	
+	return 0;
+}
+
+- (int) resume:(VPCALL)vpcall
+{
+	if (vp) 
+	{
+		vp->Resume(vpcall);
+	} 
+	
+	return 0;
+}
+
+- (BOOL) isHold:(VPCALL)vpcall
+{
+	if (vp)
+	{
+		return vp->IsHeld(vpcall) == 1;
+	}
+	return NO;
+}
+
+
+
+- (NSString*) getRemoteCallName:(VPCALL)vpcall
+{
+	if (!vp) return nil;
+	char name[MAXNAMELEN+1];
+	vp->GetCallRemoteName(vpcall, name);
+	
+	return [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
+}
+
+- (NSString*) getLogonName
+{
+	if (!vp) return nil;
+	
+	return [NSString stringWithCString:vp->LogonName() encoding:NSUTF8StringEncoding];
+}
+
+- (NSString*) getLogonNumber
+{
+	if (!vp) return nil;
+	
+	return [NSString stringWithCString:vp->LogonNumber() encoding:NSUTF8StringEncoding];
+}
+
+- (void)askVpnumber:(NSString*)name
+{
+    if (!vp) return;
+    
+   // if ([name isEqualToString:[[VPEngine sharedInstance] getLogonName]])
+   //    return [[VPEngine sharedInstance] getLogonNumber];
+    
+    VPCALL  tmpcall = vp->CreateCall();
+    vp->Connect(tmpcall, [name cStringUsingEncoding:NSASCIIStringEncoding], BC_NOTHING);
+}
+
+- (void) askOnline:(NSArray*)numbers
+{
+    aol.notificationreqop = NOTIFICATIONREQ_ENABLE;                                                          
+    aol.N = 0;                                                                                               
+    if(aol.nums)                                                                                             
+        free(aol.nums);                                                                                  
+    aol.nums = (AOLNUM *)malloc(sizeof(AOLNUM) * [numbers count]);                                                  
+    for (NSString *number in numbers) 
+    {                                                                                                        
+        const char *num = [number cStringUsingEncoding:NSASCIIStringEncoding];
+        NSLog(@"vpnumber: %@", number);
+        aol.nums[aol.N].srvid = (num[0] - '0') * 100 + (num[1] - '0') * 10 + (num[2] - '0');                                                                                                                  
+        aol.nums[aol.N].num = atoi(num + 3);  
+        
+        NSLog(@"srvid=%d, num=%d");
+        aol.nums[aol.N].online = 0;                                                              
+        aol.N++;                                                                                 
+    }                                                                                                        
+    vp->AskOnline(&aol);               
+}
+
+- (int) downloadAddressBook:(NSString*)filepath
+{
+    if (!vp) return -1;
+
+    return vp->ServerTransfer(TCPFT_RXAB, [filepath cStringUsingEncoding:NSUTF8StringEncoding], true);
+
+}
+
+#pragma mark ---- VPEngine notification support ----
+
+- (NSString*)reasonCodeToString:(int)reasonCode {
+	
+	static NSString* reasons[36] = {
+		@"NORMAL",			@"BEARER_NOT_SUPPORTED",	@"CODEC_NOT_SUPPORTED",  
+		@"CALLPROCESSING",	@"MISSINGCLID", 			@"CALLDEFLECTION", 
+		@"BUSY",			@"FILESAME",				@"TIMEOUT", 
+		@"DISCONNECTED",	@"AUTHERROR",				@"NOTFOUND", 
+		@"SYNTAXERROR",		@"INVALIDNUMBER",			@"STORAGEEXCEEDED", 
+		@"ALREADYCONNECTED", @"PROTOCOLNOTSUPPORTED",	@"SERVERREDIRECTION", 
+		@"ADMINERROR",		@"ACCOUNTBLOCKED",			@"CALLTRANSFERCOMPLETE",
+		@"NOQUOTA",			@"USEROFFLINE",				@"SERVERNOTRESPONDING", 
+		@"SERVERNOTRUNNING", @"VPHONENOTRESPONDING",	@"VPHONENOTRUNNING", 
+		@"CALLPROCEEDING",	@"CONNECTIONLOST",			@"WRONGVERSION", 
+		@"EARLYAUDIO",		@"ANOTHERPORT",				@"ANOTHERADDR", 
+		@"CANNOTNOTIFY",	@"NOTKNOWN",				@"LOOPCALL"
+	};
+	
+	if(reasonCode >= 0 && reasonCode <= 35)
+		return reasons[reasonCode];
+	if(reasonCode == REASON_LOGGEDON)
+		return @"Logged on";
+	if(reasonCode == REASON_VERSIONOLD)
+		return @"Version old";
+	if(reasonCode == REASON_SERVERRESET)
+		return @"No server running on the specified host";
+	return @"Unknown";
+}
+
+- (int)_syncNotify:(void *)uparam message:(unsigned)msg parameter1:(unsigned)param1 parameter2:(unsigned)param2 {
+	
+	int rc = 0;
+	switch(msg)
+	{
+		case VPMSG_NOTIFYLOGON:	
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Num='%s' logged on", (const char *)param1);
+			break;
+		case VPMSG_NEWVOICEMSG:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"New voice message from num='%s', name='%s'", 
+					   (const char *)param1, (const char *)param2);
+			break;
+		case VPMSG_ABUPDATE:
+        {
+			VP_LOG_MSG(VP_LOG_DEBUG, @"User '%s' has number '%s'", (const char *)param1, (const char *)param2);
+
+			break;
+        }
+	}
+	return rc;
+}
+
+
+- (void)_notify:(void *)uparam message:(unsigned)msg call:(unsigned)pcall parameter:(unsigned)param {
+	
+	char s[300];
+	VPCALL vpcall = (VPCALL)pcall;
+	
+	switch(msg)
+	{
+		case VPMSG_SERVERSTATUS:
+			VP_LOG_MSG(VP_LOG_DEBUG, 
+							@"Server status: %@ (%x)", [self reasonCodeToString:pcall], param);
+/*			if (vp->IsLoggedOn())
+				[loginButton performSelectorOnMainThread:@selector(removeFromSuperview) withObject:nil waitUntilDone:NO];
+*/
+			break;
+		case VPMSG_INVALIDADDR:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"User not found for call %d", pcall);
+			break;
+		case VPMSG_CALLFORWARDING:
+		{
+			int op;
+			vp->GetCallForwardingStatus(&op, s);
+			if(op == 1) {
+				VP_LOG_MSG(VP_LOG_DEBUG, @"Call forwarding disabled");
+			} else {
+				VP_LOG_MSG(VP_LOG_DEBUG, @"Call forwarding status: %s to %s", op == 3 ? "Enabled on offline" : "Enabled", s);
+			}
+			break;
+		}
+		case VPMSG_SERVERTRANSFERFINISHED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Server transfer op %d finished with error %d", pcall, param);
+			break;
+		case VPMSG_SERVERNOTRESPONDING:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Server not responding for call %d", pcall);
+			break;
+		case VPMSG_RESOLVED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Address for call %d found", pcall);
+			break;
+		case VPMSG_USERALERTED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"User alerted for call %d", pcall);
+			break;
+		case VPMSG_CALLREFUSED: {
+			VP_LOG_MSG(VP_LOG_DEBUG, @"The user has not accepted the call %d, reason=%@", 
+					   pcall, [self reasonCodeToString:param]);
+			vp->GetCallText(vpcall, s);
+			if(*s) {
+				VP_LOG_MSG(VP_LOG_DEBUG, @"The user left a message: %s", s);
+			}
+			break;
+		}
+		case VPMSG_CALLACCEPTED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"User accepted call %d", pcall);
+			break;
+		case VPMSG_CALLACCEPTEDBYUSER:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"User explicitly accepted call %d", pcall);
+			break;
+		case VPMSG_CONNECTFINISHED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Connection procedure finished for call %d", pcall);
+			if (vp->GetCallBearer(vpcall) == BC_FILE){
+				NSLog(@"%@", [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"]);
+				vp->SendFile(vpcall, [[[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"] UTF8String]);
+			}
+			break;
+		case VPMSG_CALLESTABLISHED:
+			if (vp->GetCallBearer(vpcall) == BC_CHAT){
+//				chatConnected = YES;
+//				chatCall = vpcall;
+			}
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d established", pcall);
+			break;
+		case VPMSG_CALLSETUPFAILED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call setup failed for call %d", pcall);
+			break;
+		case VPMSG_CONNECTTIMEOUT:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Remote device not responding for call %d", pcall);
+			break;
+		case VPMSG_CALLDISCONNECTED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"The remote user has terminated the call %d, reason %@", 
+							pcall, [self reasonCodeToString:param]);
+			break;
+		case VPMSG_CALLENDED: {
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d ended, reason %@", pcall, [self reasonCodeToString:param]);
+			vp->FreeCall(vpcall);
+//			if(vpcall == gvpcall) {
+//				gvpcall = 0;
+//			}
+//			if (vpcall == chatCall){
+//				chatConnected = NO;
+//			}
+			break;
+		}
+		case VPMSG_NEWCALL:
+			if(vp->GetCallBearer(vpcall) == BC_SMS) {
+				char text[MAXTEXTLEN+1], name[MAXNAMELEN+1];
+				unsigned n, tm, bc;
+				static const char *bearernames[] = {"voice", "video", "chat", "sms", "file transfer", "video", "video message"};
+				
+				vp->GetCallRemoteName(vpcall, name);
+				if(!vp->GetMissedCallsData(vpcall, &n, &tm, &bc) && n)
+				{
+					sprintf(text, "You have been called %d times by %s. The last call was a %s call and was made on ",
+							n, name, bc > 6 ? "unknown" : bearernames[bc]);
+					utimetotext(tm, text + strlen(text));
+					VP_LOG_MSG(VP_LOG_DEBUG, @"%s.", text);
+				} else {
+					vp->GetCallRemoteName(vpcall, name);
+					vp->GetCallText(vpcall, text);
+					VP_LOG_MSG(VP_LOG_DEBUG, @"SMS from %s: %s.", name, text);
+				}
+				vp->FreeCall(vpcall);
+			} else {
+				char name[MAXNAMELEN+1];
+				
+				vp->GetCallRemoteName(vpcall, name);
+				if(vp->GetCallStatus(vpcall) == VPCS_CONNECTED) {
+					VP_LOG_MSG(VP_LOG_DEBUG, @"Automatic new call %d from %s", pcall, name);
+				} else {
+					VP_LOG_MSG(VP_LOG_DEBUG, @"Incoming new call %d from %s", pcall, name);
+				}
+//				call = vpcall;
+				if (vp->GetCallBearer(vpcall) == BC_FILE){
+//					fileCall = vpcall;
+				}
+				else {
+//					gvpcall = vpcall;	
+				}
+			}
+			break;
+		case VPMSG_KEYPAD:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Keypad '%c' (0x%X) received from call %d", param, param, pcall);
+			break;
+		case VPMSG_REMOTELYCONFERENCED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d remotely conferenced", pcall);
+			break;
+		case VPMSG_REMOTELYUNCONFERENCED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d remotely taken out from conference", pcall);
+			break;
+		case VPMSG_REMOTELYHELD:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d remotely held", pcall);
+			break;
+		case VPMSG_REMOTELYRESUMED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d remotely resumed", pcall);
+			break;
+		case VPMSG_CONFERENCEESTABLISHED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d added to conference (we are master), detach=%d", pcall, param);
+			break;
+		case VPMSG_CONFERENCEFAILED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d could not be added to conference (we are master), detach=%d", pcall, param);
+			break;
+		case VPMSG_CONFERENCEREQ:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d is asking us to be added to a conference", pcall);
+			vp->AcceptConference(vpcall, true);
+			break;
+		case VPMSG_CONFERENCECALLESTABLISHED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d in conference (we are slave)", pcall);
+			break;
+		case VPMSG_CONFERENCEEND:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d (master) has terminated the conference (we are slave)", pcall);
+			break;
+		case VPMSG_CALLTRANSFERRED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Call %d has been transferred to the new call %d", pcall, param);
+			break;
+		case VPMSG_CHAT:
+			vp->GetChatText(vpcall, s, 300);
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Chat message: %s", s);
+			break;
+		case VPMSG_CHATACK:
+			vp->GetChatText(vpcall, s, 300);
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Chat message sent: %s", s);
+			break;
+		case VPMSG_SENDFILEACK_REFUSED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"File transfer refused (call=%d)", pcall);
+			break;
+		case VPMSG_SENDFILEACK_USERALERTED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"File transfer user alerted  (call=%d)", pcall);
+			break;
+		case VPMSG_SENDFILEACK_ACCEPTED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"File transfer accepted (call=%d)", pcall);
+			break;
+		case VPMSG_FTPROGRESS:
+		{
+			unsigned cur, tot;
+			vp->GetFileProgress(vpcall, &cur, &tot);
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Progress %u/%u", cur, tot);
+			break;
+		}
+			break;
+		case VPMSG_FTTIMEOUT:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"File transfer timeout (call=%d)", pcall);
+			break;
+		case VPMSG_FTTXCOMPLETE:
+		case VPMSG_FTRXCOMPLETE:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"File transfer complete (call=%d)", pcall);
+			break;
+		case VPMSG_SENDFILEREQ:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"File transfer request (call=%d)", pcall);
+			vp->AcceptFile(vpcall, 1);
+			break;
+		case VPMSG_SENDFILESUCCESS:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"File transfer finished successfully (call=%d)", pcall);
+			break;
+		case VPMSG_SENDFILEFAILED:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"File transfer finished successfully (call=%d)", pcall);
+			break;
+		case VPMSG_QUERYONLINEACK:
+			if(!pcall)	// Query online ack finished
+			{
+				int i;
+				for(i = 0; i < aol.N; i++) {
+					VP_LOG_MSG(VP_LOG_DEBUG, @"%03d%07d: %s", 
+									(int)aol.nums[i].srvid, (int)aol.nums[i].num, 
+									aol.nums[i].online == AOL_OFFLINE ? "Offline" : aol.nums[i].online == AOL_ONLINE ? "Online" : aol.nums[i].online == AOL_LIMITED ? "Accepts only contacts" : "Unknown");	
+				}
+				free(aol.nums);
+				aol.nums = 0;
+			}
+			break;
+		case VPMSG_CREDIT:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Credit is %.2f $", pcall / 10000.0);
+			if(param != (unsigned)-1)
+				VP_LOG_MSG(VP_LOG_DEBUG, @"SMS credit is %d units", param);
+			break;
+		case VPMSG_VIDEOSTARTOK:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Video started (call %d)", param);
+			break;
+		case VPMSG_VIDEOSTARTERROR:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Video could not start (call %d)", param);
+			break;
+		default:
+			VP_LOG_MSG(VP_LOG_DEBUG, @"Message %u, pcall %u, param %u", msg, pcall, param);
+	}
+}
+
+
+- (void) _postNotification: (unsigned)msg param1:(unsigned)param1 param2:(unsigned)param2
+{
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+    
+    NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] initWithCapacity:3];
+	[userInfo setObject:[NSNumber numberWithUnsignedLong:msg] forKey:@"MSG"];
+	[userInfo setObject:[NSNumber numberWithUnsignedLong:param1] forKey:@"PARAM1"];
+	[userInfo setObject:[NSNumber numberWithUnsignedLong:param2] forKey:@"PARAM2"];
+
+    // post notification asynchronous 
+//    [[NSNotificationCenter defaultCenter] postNotificationName:VPEngineAsyncNotification
+//                                         object:nil userInfo:userInfo];
+    
+
+    // post synchronous (on main thread)
+	NSNotification *note = [NSNotification notificationWithName:VPEngineNotification object:nil userInfo:userInfo];
+	[[NSNotificationCenter defaultCenter] performSelectorOnMainThread:@selector(postNotification:) withObject:note 
+                                         waitUntilDone:YES];
+    
+    
+
+    [pool release];
+    
+}
+
+void VPRoutineNotify(void *param, unsigned msg, unsigned param1, unsigned param2) 
+{
+//     NSLog(@"VPRoutineNotify: 0x%08x", pthread_self());
+	// Post notification(s)
+    [[VPEngine sharedInstance] _postNotification:msg param1:param1 param2:param2];
+    
+    // Process
+	[[VPEngine sharedInstance] _notify:0 message:msg call:param1 parameter:param2];
+	
+}
+
+int VPRoutineSyncNotify(void *uparam, unsigned msg, unsigned param1, unsigned param2) 
+{
+//    NSLog(@"VPRoutineSyncNotify: 0x%08x", pthread_self());
+    // Post notification(s)
+    [[VPEngine sharedInstance] _postNotification:msg param1:param1 param2:param2];
+    
+	return [[VPEngine sharedInstance] _syncNotify:uparam message:msg parameter1:param1 parameter2:param2]; 
+}
+
+
+
+@end

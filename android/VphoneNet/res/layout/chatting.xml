@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#FFFFFF">
+	<LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="10dp"
+		android:gravity="right"
+		android:background="@drawable/titleyellow">
+		<LinearLayout 
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_weight="8"
+			android:gravity="center"
+			android:layout_height="wrap_content">
+			<TextView android:id="@+id/title" 
+ 				android:textSize="24dp"
+ 				android:textColor="#000000"
+ 				android:textStyle="bold"
+  				android:text="@string/whattodo" 
+				android:layout_width="wrap_content" 
+				android:layout_height="fill_parent"/>
+		</LinearLayout>
+		<Button android:id="@+id/sharef" 
+			android:background="@drawable/buttonvgrey"
+			android:paddingTop="10dp"
+			android:layout_weight="1"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"/>
+  	</LinearLayout>
+	<ListView
+  		android:id="@+id/android:list"
+  		android:background="@drawable/background"
+  		android:divider="@null"
+		android:dividerHeight="0dp"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content">
+	</ListView>
+	<TextView
+		android:id="@id/android:empty"
+		android:text="@string/lisem"
+		android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent"/>
+</LinearLayout>

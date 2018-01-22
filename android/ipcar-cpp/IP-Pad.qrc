@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/">
+        <file>IP-Pad.sql</file>
+
+		<file>qss-IP-Pad/keyboard/layout.xml</file>
+		<file>qss-IP-Pad/stylesheet.xml</file> 		
+
+		<file>qss-IP-Pad/forms/add.ui</file>
+		<file>qss-IP-Pad/forms/browser.ui</file>
+		<file>qss-IP-Pad/forms/capture.ui</file>
+		<file>qss-IP-Pad/forms/chat.ui</file>
+		<file>qss-IP-Pad/forms/contacts.ui</file>
+		<file>qss-IP-Pad/forms/dial.ui</file>
+		<file>qss-IP-Pad/forms/directory.ui</file>
+		<file>qss-IP-Pad/forms/ftp.ui</file>
+		<file>qss-IP-Pad/forms/info.ui</file>
+		<file>qss-IP-Pad/forms/log.ui</file>
+		<file>qss-IP-Pad/forms/login.ui</file>
+		<file>qss-IP-Pad/forms/main.ui</file>
+		<file>qss-IP-Pad/forms/message.ui</file>
+		<file>qss-IP-Pad/forms/mms.ui</file>
+		<file>qss-IP-Pad/forms/progress.ui</file>
+		<file>qss-IP-Pad/forms/settings/audio.ui</file>
+		<file>qss-IP-Pad/forms/settings/call.ui</file>
+		<file>qss-IP-Pad/forms/settings/network.ui</file>
+		<file>qss-IP-Pad/forms/settings/video.ui</file>
+		<file>qss-IP-Pad/forms/settings.ui</file>
+		<file>qss-IP-Pad/forms/slides.ui</file>
+		<file>qss-IP-Pad/forms/sms.ui</file>
+		<file>qss-IP-Pad/forms/videoCall.ui</file>
+		<file>qss-IP-Pad/forms/videoConf.ui</file>
+		<file>qss-IP-Pad/forms/voiceCall.ui</file>
+		<file>qss-IP-Pad/forms/portForward.ui</file>
+    </qresource>
+</RCC>

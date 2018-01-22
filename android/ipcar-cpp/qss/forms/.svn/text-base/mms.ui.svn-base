@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mmsForm</class>
+ <widget class="QWidget" name="mmsForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>727</width>
+    <height>435</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="mms_video" native="true">
+   <property name="geometry">
+    <rect>
+     <x>206</x>
+     <y>75</y>
+     <width>297</width>
+     <height>223</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QFrame" name="mms_videoIn">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>120</y>
+     <width>176</width>
+     <height>133</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="mms_vpnumber">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>24</y>
+     <width>185</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mms_recStart">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>10</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mms_recStop">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>10</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mms_playStart">
+   <property name="geometry">
+    <rect>
+     <x>391</x>
+     <y>10</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mms_playStop">
+   <property name="geometry">
+    <rect>
+     <x>391</x>
+     <y>10</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mms_send">
+   <property name="geometry">
+    <rect>
+     <x>451</x>
+     <y>10</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mms_close">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>10</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="mms_progress">
+   <property name="geometry">
+    <rect>
+     <x>99</x>
+     <y>347</y>
+     <width>316</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>24</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>true</bool>
+   </property>
+   <property name="invertedAppearance">
+    <bool>false</bool>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="mms_speed">
+   <property name="geometry">
+    <rect>
+     <x>536</x>
+     <y>339</y>
+     <width>150</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="mms_remain">
+   <property name="geometry">
+    <rect>
+     <x>536</x>
+     <y>379</y>
+     <width>150</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="mms_username">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>24</y>
+     <width>185</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

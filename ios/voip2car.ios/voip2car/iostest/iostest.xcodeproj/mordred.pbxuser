@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* iostestAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1047, 557}}";
+			sepNavSelRange = "{498, 0}";
+			sepNavVisRange = "{0, 577}";
+		};
+	};
+	1D3623250D0F684500981E51 /* iostestAppDelegate.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1356, 6510}}";
+			sepNavSelRange = "{353, 0}";
+			sepNavVisRange = "{13518, 629}";
+			sepNavWindowFrame = "{{15, 57}, {1280, 716}}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* iostest */ = {
+		activeExec = 0;
+		executables = (
+			D1697C7212B53A2B00051674 /* iostest */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = D1697C7212B53A2B00051674 /* iostest */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* iostest */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* iostest */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = D1697C8712B53A4100051674 /* Code sense */;
+		executables = (
+			D1697C7212B53A2B00051674 /* iostest */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					643,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					435,
+					624,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					757,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					869,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					829,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 315821292;
+			PBXWorkspaceStateSaveDate = 315821292;
+		};
+		perUserProjectItems = {
+			D13E8D6012D30D4B005BD8AB /* PBXTextBookmark */ = D13E8D6012D30D4B005BD8AB /* PBXTextBookmark */;
+			D1697C9C12B54B5200051674 /* PlistBookmark */ = D1697C9C12B54B5200051674 /* PlistBookmark */;
+			D1697C9D12B54B5200051674 /* PBXTextBookmark */ = D1697C9D12B54B5200051674 /* PBXTextBookmark */;
+			D169DD5612C9461D000834B3 /* PBXTextBookmark */ = D169DD5612C9461D000834B3 /* PBXTextBookmark */;
+			D191DBCF12C7890B006AB04B /* PBXTextBookmark */ = D191DBCF12C7890B006AB04B /* PBXTextBookmark */;
+			D191DBDA12C78BED006AB04B /* PBXTextBookmark */ = D191DBDA12C78BED006AB04B /* PBXTextBookmark */;
+			D191DC1112C79D58006AB04B /* PBXTextBookmark */ = D191DC1112C79D58006AB04B /* PBXTextBookmark */;
+			D191DC1212C79D58006AB04B /* PBXTextBookmark */ = D191DC1212C79D58006AB04B /* PBXTextBookmark */;
+			D191DC7812C7AC69006AB04B /* PBXTextBookmark */ = D191DC7812C7AC69006AB04B /* PBXTextBookmark */;
+			D191DDA412C7E40A006AB04B /* PBXTextBookmark */ = D191DDA412C7E40A006AB04B /* PBXTextBookmark */;
+			D191DDFA12C81351006AB04B /* PBXTextBookmark */ = D191DDFA12C81351006AB04B /* PBXTextBookmark */;
+			D1AF30B412C77A6800B296C0 /* PlistBookmark */ = D1AF30B412C77A6800B296C0 /* PlistBookmark */;
+			D1AF30B812C77A6800B296C0 /* PBXTextBookmark */ = D1AF30B812C77A6800B296C0 /* PBXTextBookmark */;
+		};
+		sourceControlManager = D1697C8612B53A4100051674 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1221, 644}}";
+			sepNavSelRange = "{354, 0}";
+			sepNavVisRange = "{0, 357}";
+			sepNavWindowFrame = "{{15, 57}, {1280, 716}}";
+		};
+	};
+	32CA4F630368D1EE00C91783 /* iostest_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1047, 557}}";
+			sepNavSelRange = "{93, 0}";
+			sepNavVisRange = "{0, 183}";
+		};
+	};
+	D13E8D6012D30D4B005BD8AB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* iostestAppDelegate.mm */;
+		name = "iostestAppDelegate.mm: 15";
+		rLen = 0;
+		rLoc = 353;
+		rType = 0;
+		vrLen = 629;
+		vrLoc = 13518;
+	};
+	D1697C7212B53A2B00051674 /* iostest */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = iostest;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	D1697C8612B53A4100051674 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	D1697C8712B53A4100051674 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	D1697C9C12B54B5200051674 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* iostest-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/mordred/projects/voip2car/core/iostest/iostest-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	D1697C9D12B54B5200051674 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* iostestAppDelegate.h */;
+		name = "iostestAppDelegate.h: 7";
+		rLen = 0;
+		rLoc = 140;
+		rType = 0;
+		vrLen = 323;
+		vrLoc = 0;
+	};
+	D169DD5612C9461D000834B3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* iostestAppDelegate.mm */;
+		name = "iostestAppDelegate.mm: 7";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 1109;
+		vrLoc = 0;
+	};
+	D191DBCF12C7890B006AB04B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* iostest_Prefix.pch */;
+		name = "iostest_Prefix.pch: 4";
+		rLen = 0;
+		rLoc = 93;
+		rType = 0;
+		vrLen = 183;
+		vrLoc = 0;
+	};
+	D191DBD412C7890B006AB04B /* cetest.cpp */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = cetest.cpp;
+		path = /Users/mordred/voip2car/SRC/vphone2/cetest/cetest.cpp;
+		sourceTree = "<absolute>";
+	};
+	D191DBDA12C78BED006AB04B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D191DBD412C7890B006AB04B /* cetest.cpp */;
+		name = "cetest.cpp: 161";
+		rLen = 7047;
+		rLoc = 4794;
+		rType = 0;
+		vrLen = 1142;
+		vrLoc = 5027;
+	};
+	D191DBEF12C78E81006AB04B /* iostestAppDelegate.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = iostestAppDelegate.h;
+		path = /Users/mordred/projects/voip2car/core/iostest/Classes/iostestAppDelegate.h;
+		sourceTree = "<absolute>";
+	};
+	D191DC1112C79D58006AB04B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 11";
+		rLen = 0;
+		rLoc = 187;
+		rType = 0;
+		vrLen = 357;
+		vrLoc = 0;
+	};
+	D191DC1212C79D58006AB04B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* iostest_Prefix.pch */;
+		name = "iostest_Prefix.pch: 4";
+		rLen = 0;
+		rLoc = 93;
+		rType = 0;
+		vrLen = 183;
+		vrLoc = 0;
+	};
+	D191DC3D12C7A28E006AB04B /* iostestAppDelegate.mm */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.objcpp;
+		name = iostestAppDelegate.mm;
+		path = /Users/mordred/projects/voip2car/core/iostest/Classes/iostestAppDelegate.mm;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1356, 6510}}";
+			sepNavSelRange = "{353, 0}";
+			sepNavVisRange = "{13518, 629}";
+		};
+	};
+	D191DC7812C7AC69006AB04B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D191DC3D12C7A28E006AB04B /* iostestAppDelegate.mm */;
+		name = "iostestAppDelegate.mm: 99";
+		rLen = 0;
+		rLoc = 3494;
+		rType = 0;
+		vrLen = 1181;
+		vrLoc = 2632;
+	};
+	D191DDA412C7E40A006AB04B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D191DBD412C7890B006AB04B /* cetest.cpp */;
+		name = "cetest.cpp: 499";
+		rLen = 0;
+		rLoc = 14567;
+		rType = 0;
+		vrLen = 870;
+		vrLoc = 14194;
+	};
+	D191DDFA12C81351006AB04B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D191DBEF12C78E81006AB04B /* iostestAppDelegate.h */;
+		name = "iostestAppDelegate.h: 28";
+		rLen = 0;
+		rLoc = 647;
+		rType = 0;
+		vrLen = 1159;
+		vrLoc = 28;
+	};
+	D1AF30B412C77A6800B296C0 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* iostest-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/mordred/projects/voip2car/core/iostest/iostest-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	D1AF30B812C77A6800B296C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 357;
+		vrLoc = 0;
+	};
+}

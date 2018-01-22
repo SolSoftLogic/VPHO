@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ftpForm</class>
+ <widget class="QWidget" name="ftpForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>727</width>
+    <height>482</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="ftp_username">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>24</y>
+     <width>185</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ftp_add">
+   <property name="geometry">
+    <rect>
+     <x>441</x>
+     <y>9</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ftp_send">
+   <property name="geometry">
+    <rect>
+     <x>617</x>
+     <y>9</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ftp_del">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>9</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ftp_hold">
+   <property name="geometry">
+    <rect>
+     <x>559</x>
+     <y>9</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ftp_resume">
+   <property name="geometry">
+    <rect>
+     <x>559</x>
+     <y>9</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ftp_open">
+   <property name="geometry">
+    <rect>
+     <x>617</x>
+     <y>9</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="ftp_coc">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>390</y>
+     <width>291</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close on complete</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="ftp_table">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>69</y>
+     <width>707</width>
+     <height>193</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="autoScrollMargin">
+    <number>0</number>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SingleSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectRows</enum>
+   </property>
+   <attribute name="horizontalHeaderVisible">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="horizontalHeaderHighlightSections">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderHighlightSections">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>File</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Status</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QProgressBar" name="ftp_total">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>345</y>
+     <width>500</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>350</y>
+     <width>71</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Total</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>310</y>
+     <width>71</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Current</string>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="ftp_current">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>306</y>
+     <width>500</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ftp_disc">
+   <property name="geometry">
+    <rect>
+     <x>617</x>
+     <y>9</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ftp_speed">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>400</y>
+     <width>135</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

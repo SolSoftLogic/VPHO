@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>addForm</class>
+ <widget class="QWidget" name="addForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>702</width>
+    <height>374</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="add_label">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>16</y>
+     <width>70</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Name:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>16</y>
+     <width>81</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>VNumber:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>486</x>
+     <y>16</y>
+     <width>50</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SDial:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>61</y>
+     <width>130</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>First Name:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>95</y>
+     <width>130</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Last Name:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>129</y>
+     <width>130</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Country:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>162</y>
+     <width>130</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>State:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>308</x>
+     <y>61</y>
+     <width>130</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Homepage:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>308</x>
+     <y>95</y>
+     <width>130</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Email:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>308</x>
+     <y>129</y>
+     <width>130</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mobile:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>308</x>
+     <y>162</y>
+     <width>130</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Office</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="add_name">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>16</y>
+     <width>136</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="type" stdset="0">
+    <string>whiteOnBlack</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="add_number">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>16</y>
+     <width>136</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="type" stdset="0">
+    <string>whiteOnBlack</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="add_sdial">
+   <property name="geometry">
+    <rect>
+     <x>546</x>
+     <y>16</y>
+     <width>34</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="type" stdset="0">
+    <string>whiteOnBlack</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="add_firstname">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>59</y>
+     <width>151</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="type" stdset="0">
+    <string>blackOnWhite</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="add_lastname">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>93</y>
+     <width>151</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="type" stdset="0">
+    <string>blackOnWhite</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="add_country">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>127</y>
+     <width>151</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="type" stdset="0">
+    <string>blackOnWhite</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="add_state">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>161</y>
+     <width>151</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="type" stdset="0">
+    <string>blackOnWhite</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="add_office">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>160</y>
+     <width>201</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="type" stdset="0">
+    <string>blackOnWhite</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="add_mobile">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>126</y>
+     <width>201</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="type" stdset="0">
+    <string>blackOnWhite</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="add_email">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>92</y>
+     <width>201</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="type" stdset="0">
+    <string>blackOnWhite</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="add_homepage">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>58</y>
+     <width>201</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="type" stdset="0">
+    <string>blackOnWhite</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_sc">
+   <property name="geometry">
+    <rect>
+     <x>591</x>
+     <y>1</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_del">
+   <property name="geometry">
+    <rect>
+     <x>648</x>
+     <y>1</y>
+     <width>48</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_visitHomepage">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>60</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_sendEmail">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>94</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_callMobile">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>128</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_callOffice">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>162</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

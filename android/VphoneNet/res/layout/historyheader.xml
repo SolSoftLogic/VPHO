@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/demoheader_title"
+	android:background="@drawable/bardivider"
+	android:textColor="#FFFFFF"
+	android:textSize="20dp"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="15dip"
+	style="?android:attr/listSeparatorTextViewStyle"/>

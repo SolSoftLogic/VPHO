@@ -1,0 +1,517 @@
+//
+//  VideocallViewController.m
+//  Vphonet
+
+#import "vpstack/ios/video.h"
+#import "VPEngine.h"
+
+#import "VphonetAppDelegate.h"
+#import "CallViewController.h"
+
+@implementation CallViewController
+
+@synthesize optionsCall;
+@synthesize buttonHold;
+@synthesize buttonMute;
+@synthesize buttonVideo;
+
+- (id) init
+{
+    self = [super init];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    
+    
+    callers = new CallerMap;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(vpVideoDidStartNotification:) 
+                                                 name:VPVideoDidStartNotification
+                                               object:nil];	
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(vpVideoDidFinishNotification:) 
+                                                 name:VPVideoDidFinishNotification
+                                               object:nil];		
+    
+    
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(vpEngineNotification:) 
+                                                 name:VPEngineNotification
+                                               object:nil];		
+    
+    return self;
+        
+}
+
+- (id) initWithCall:(VPCALL)call
+{
+    self = [self init];
+    if (self)
+	{
+		// Add call to dictionary. We still don't know is it video or just voice call.
+		callers->insert(std::make_pair(call, (UIImageView*)0));		
+		
+	}
+	return self;
+    
+    
+}
+
+- (id)initWithContact:(VPContact*)contact bearer:(unsigned)bearer
+{
+    self = [self init];
+    vpcontact = contact;
+    [vpcontact retain];
+    VPCALL call = [[VPEngine sharedInstance] makeCall:vpcontact.username bearer:bearer];
+    callers->insert(std::make_pair(call, (UIImageView*)0));		
+    return self;
+}
+
+- (void)loadView {
+
+	// main view
+    UIView *mainView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 480.0f)];
+	self.view = mainView;
+    [mainView release];
+
+    // caller view
+    callerView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 436.0f)];
+    callerView.backgroundColor = [UIColor colorWithRed:15/256.0f green:15/256.0f blue:15/256.0f alpha:1.0f];
+    callerView.image = [UIImage imageNamed:@"default_contact2.png"];
+    [self.view addSubview:callerView];
+	
+	// button for screen click
+	UIButton* screenButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 436.0f)];
+    screenButton.backgroundColor = [UIColor clearColor];
+    //screenButton.backgroundColor = [UIColor blackColor];
+	[screenButton addTarget:self action:@selector(onScreenClick:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:screenButton];
+	
+	
+	if (optionsCall == nil) {
+		NSArray* nibViews =  [[NSBundle mainBundle] loadNibNamed:@"CallOptionsView" owner:self options:nil];
+		optionsCall = [nibViews objectAtIndex:0];
+		optionsCall.frame = CGRectMake(20.0, 140.0, 280.0, 210.0);
+		optionsCall.layer.cornerRadius = 10;
+		[optionsCall.layer setBorderColor: [[UIColor whiteColor] CGColor]];
+		[optionsCall.layer setBorderWidth: 2.0];
+		[optionsCall setHidden:YES];	
+		[self.view addSubview:optionsCall];
+    }
+
+	
+    
+    // bottom toolbar with End button
+    NSMutableArray *toolbarButtons = [[NSMutableArray alloc] init];
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0, 436.0, 320.0, 44.0f)];
+    [toolbar setBarStyle:UIBarStyleBlackOpaque];
+    UIBarButtonItem *item  = [[UIBarButtonItem alloc] 
+                              initWithBarButtonSystemItem: 
+                              UIBarButtonSystemItemFlexibleSpace
+                              target:nil action:NULL]; 
+    [toolbarButtons addObject:item];
+    [item release];
+    
+    UIButton *endCallButton =  [UIButton buttonWithType:UIButtonTypeCustom]; 
+	[endCallButton setFrame:CGRectMake(23.0f, 6.0f, 274.0f, 33.0f)];		
+    [endCallButton setBackgroundImage:[UIImage imageNamed:@"redButton.png"] forState:UIControlStateNormal];     
+	[endCallButton setOpaque:NO];
+    [endCallButton addTarget:self action:@selector(hangup:) forControlEvents:UIControlEventTouchUpInside];
+    item  = [[UIBarButtonItem alloc] initWithCustomView:endCallButton];
+	[toolbarButtons addObject:item];
+    [item release];
+    
+    item  = [[UIBarButtonItem alloc] 
+             initWithBarButtonSystemItem: 
+             UIBarButtonSystemItemFlexibleSpace
+             target:nil action:NULL]; 
+    [toolbarButtons addObject:item];
+    [item release];    
+    [toolbar setItems:toolbarButtons animated:YES]; 
+    [self.view addSubview:toolbar];
+    [toolbar release];
+    // "End Call" label and image
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(100.0f, 444.0f, 40.0f, 27.0f)];
+    imgView.image = [UIImage imageNamed:@"endcall_icon.png"];
+    [self.view addSubview:imgView];
+    [imgView release];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(149.0f, 447.0f, 70.0f, 21.0f)];
+    label.text = @"End Call";
+    label.font = [UIFont boldSystemFontOfSize:17];
+    [label setOpaque:NO];
+    [label setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0f blue:0.0f alpha:0.0f ]];
+    [label setTextColor:[UIColor whiteColor]];
+    [self.view addSubview:label];
+    [label release];
+    
+    // Top bar
+    imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 80.0f)];
+    imgView.image = [UIImage imageNamed:@"blackbg.png"];
+    [imgView setAlpha:0.65];
+    [self.view addSubview:imgView];
+    [imgView release];
+    callerNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(18.0f, 5.0f, 211.0f, 37.0f)];
+    callerNameLabel.font = [UIFont systemFontOfSize:24.0f];
+    [callerNameLabel setTextAlignment:UITextAlignmentCenter];
+    [callerNameLabel setOpaque:NO];
+    [callerNameLabel setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0f blue:0.0f alpha:0.0f ]];
+    [callerNameLabel setTextColor:[UIColor whiteColor]];
+    NSString *name;
+    if (vpcontact)
+    {
+        if ([vpcontact.firstName length] || [vpcontact.lastName length])
+        {
+            name = [NSString stringWithFormat:@"%@ %@", vpcontact.firstName, vpcontact.lastName];
+        }
+        else 
+        {
+            name = [NSString stringWithString:vpcontact.username];
+        }
+
+    }
+    else 
+    {
+        name = [[VPEngine sharedInstance] getRemoteCallName:callers->begin()->first];
+    }
+
+    callerNameLabel.text = name;
+    [self.view addSubview:callerNameLabel];
+    [callerNameLabel release];
+    
+    timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(29.0f, 43.0f, 190.0f, 24.0f)];
+    timeLabel.font = [UIFont systemFontOfSize:20.0f];
+    [timeLabel setTextAlignment:UITextAlignmentCenter];
+    [timeLabel setOpaque:NO];
+    [timeLabel setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0f blue:0.0f alpha:0.0f ]];
+    [timeLabel setTextColor:[UIColor whiteColor]];
+    
+    [self.view addSubview:timeLabel];
+    [timeLabel release];
+    
+    if (vpcontact)
+    {
+        timeLabel.text = @"Calling...";
+    }
+    else 
+    {
+        timeLabel.text = @"00:00";
+    }
+}
+
+
+- (void)onScreenClick:(id)sender
+{
+	if (!callers->empty())
+	{
+		VPCALL call = callers->begin()->first;
+		if ([[VPEngine sharedInstance] getCallBearer:call] == BC_VOICE)
+		{
+			[buttonVideo setTitle:@"Video" forState:UIControlStateNormal];
+		}
+		else
+		{
+			[buttonVideo setTitle:@"Capture" forState:UIControlStateNormal];
+		}
+	}
+	
+	[optionsCall setHidden:NO];
+}
+
+- (IBAction) onMuteClick: (id)sender
+{
+	[optionsCall setHidden:YES];	
+}
+
+- (IBAction) onKeypadClick: (id)sender
+{
+	VphonetAppDelegate *appDelegate = (VphonetAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[appDelegate.tabBarController setSelectedIndex:2];
+	[optionsCall setHidden:YES];	
+	[self.view removeFromSuperview];
+	//TODO: Next ??? X.Z.
+}
+
+- (IBAction) onSpeekerClick: (id)sender
+{
+	[optionsCall setHidden:YES];
+}
+
+- (IBAction) onAddCallClick: (id)sender
+{
+	VphonetAppDelegate *appDelegate = (VphonetAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[appDelegate.tabBarController setSelectedIndex:0];
+	[optionsCall setHidden:YES];	
+	[self.view removeFromSuperview];
+	//TODO: Next ??? X.Z.
+}
+
+- (IBAction) onHoldClick: (id)sender
+{
+	if (!callers->empty())
+	{
+		VPCALL call = callers->begin()->first;
+		if ([[VPEngine sharedInstance] isHold:call])
+		{
+			[buttonHold setBackgroundColor: [UIColor clearColor]];
+			[[VPEngine sharedInstance] resume:call];
+		}
+		else
+		{
+			 //[UIColor colorWithRed:255/255.0 green:251/255.0 blue:204/255.0 alpha:1];
+			[buttonHold setBackgroundColor: [UIColor colorWithRed:255/255.0f green:0/255.0f blue:0/255.0f alpha:1.0f]];
+			[[VPEngine sharedInstance] hold:call];
+		
+		}
+
+	}
+	
+	[optionsCall setHidden:YES];
+}
+
+- (IBAction) onCaptureClick: (id)sender
+{
+	[optionsCall setHidden:YES];	
+}
+
+- (IBAction) onEndCallClick: (id)sender
+{
+	[optionsCall setHidden:YES];
+}
+
+
+
+- (void) updateGUI
+{
+	struct tm ptm;
+	char timeFormatted[25];
+	time_t timediff = time(0) - startTime;
+	localtime_r(&timediff, &ptm);    
+	if (timediff < 3600)
+		strftime(timeFormatted, sizeof timeFormatted, "%M:%S", &ptm);    
+    else 
+		strftime(timeFormatted, sizeof timeFormatted, "%H:%M:%S", &ptm);
+	
+	
+	[timeLabel setText:[NSString stringWithCString:timeFormatted encoding:NSASCIIStringEncoding]];
+}
+
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)orientation duration:(NSTimeInterval)duration {
+}
+
+
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations.
+	//return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);   
+	return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void) hangup:(id)sender
+{
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	
+	if (sender) // hang up initialized by us
+	{
+		for (CallerMap::iterator iter = callers->begin(); iter != callers->end(); ++iter)
+		{
+			[[VPEngine sharedInstance] hangup:iter->first];
+		}
+	}
+	
+	[self.view removeFromSuperview];
+
+    if (updateGUITimer)
+    {
+		[updateGUITimer invalidate];
+        updateGUITimer = nil;
+    }
+    
+/*    if (delegate)
+        [delegate callFinished:self];
+    
+*/
+	[self release];
+}
+
+#pragma mark -
+#pragma mark Notifications
+
+- (void) vpVideoDidStartNotification:(NSNotification*)notification
+{		 	
+	NSLog(@"vpVideoDidStartNotification:");
+	UIImageView *remoteVideoView = [[notification userInfo] objectForKey:@"IMAGEVIEW"];
+	VPCALL call = (VPCALL)[[[notification userInfo] objectForKey:@"VPCALL"] unsignedIntValue];
+	
+	callers->insert(std::make_pair(call, remoteVideoView));
+	
+	if (callers->size() > 1) // it's conference.
+	{
+		// NOT IMPLEMENTED
+		return;
+	}
+	
+	[callerView addSubview:remoteVideoView];
+    [remoteVideoView release];
+    
+	// Rotate and scale remote video view
+	remoteVideoView.transform = CGAffineTransformRotate(remoteVideoView.transform, M_PI/2);
+	remoteVideoView.transform = CGAffineTransformScale(remoteVideoView.transform, 
+													   436.0f/remoteVideoView.bounds.size.width, 
+													   320.0f/remoteVideoView.bounds.size.height);
+	[remoteVideoView setFrame:CGRectMake(0.0f, 0.0f, 320.0f, 436.0f)];
+	
+	
+#if !TARGET_IPHONE_SIMULATOR
+	if ([Camcorder sharedInstance].previewView.superview != self.view)
+	{
+		
+		[[Camcorder sharedInstance].previewView setFrame:CGRectMake(258.0f, 
+                                                                    4.0f,
+                                                                    [Camcorder sharedInstance].previewView.frame.size.width,
+																	[Camcorder sharedInstance].previewView.frame.size.height)];
+		
+		[self.view addSubview:[Camcorder sharedInstance].previewView];
+		
+		NSLog(@"previewView bounds(%f, %f, %fx%f)", 
+			  [Camcorder sharedInstance].previewView.bounds.origin.x, [Camcorder sharedInstance].previewView.bounds.origin.y,
+			  [Camcorder sharedInstance].previewView.bounds.size.width, [Camcorder sharedInstance].previewView.bounds.size.height);
+		
+		NSLog(@"previewView  frame(%f, %f, %fx%f)", 
+			  [Camcorder sharedInstance].previewView.frame.origin.x, [Camcorder sharedInstance].previewView.frame.origin.y,
+			  [Camcorder sharedInstance].previewView.frame.size.width, [Camcorder sharedInstance].previewView.frame.size.height);
+	}
+#else
+    UIImageView *nocamera = [[UIImageView alloc] initWithFrame:CGRectMake(240.0f, 4.0f, 72.0f, 72.0f)];
+    nocamera.image = [UIImage imageNamed:@"novideo_icon.png"];
+    [nocamera setAlpha:0.6];
+    [self.view addSubview:nocamera];
+    [nocamera release];
+#endif
+	
+	
+}
+
+
+- (void) vpVideoDidFinishNotification:(NSNotification*)notification
+{		 	
+//	NSLog(@"vpVideoDidFinishNotification:");
+}
+
+
+- (void) vpEngineNotification:(NSNotification*)notification
+{		 	
+	unsigned msg	= 	[[[notification userInfo] objectForKey:@"MSG"] unsignedIntValue];
+//	unsigned param1 = 	[[[notification userInfo] objectForKey:@"PARAM1"] unsignedIntValue];
+	//unsigned param2 = 	[[[notification userInfo] objectForKey:@"PARAM2"] unsignedIntValue];
+    
+	switch(msg)
+	{
+        case VPMSG_CALLACCEPTED:
+        case VPMSG_CALLACCEPTEDBYUSER:
+        case VPMSG_CALLESTABLISHED:
+        {            
+            startTime = time(0);
+            
+            updateGUITimer = [NSTimer scheduledTimerWithTimeInterval: 1.0f                    
+                                                              target:self                                                      
+                                                            selector:@selector(updateGUI)
+                                                            userInfo:nil                                 
+                                                             repeats:YES];
+                        
+            break;
+        }
+        case VPMSG_CALLREFUSED:
+        {
+            timeLabel.text = @"Call refused";
+            [[NSNotificationCenter defaultCenter] removeObserver:self];
+            if (updateGUITimer)
+            {
+                [updateGUITimer invalidate];
+                updateGUITimer = 0;
+            }            
+			break;
+        }
+        case VPMSG_CALLSETUPFAILED:
+        {
+            timeLabel.text = @"Call setup failed";
+            [[NSNotificationCenter defaultCenter] removeObserver:self];
+            if (updateGUITimer)
+            {
+                [updateGUITimer invalidate];
+                updateGUITimer = 0;
+            }            
+            break;
+        }
+		case VPMSG_CALLDISCONNECTED:
+        {
+            timeLabel.text = @"Call disconnected";
+            [[NSNotificationCenter defaultCenter] removeObserver:self];
+            if (updateGUITimer)
+            {
+                [updateGUITimer invalidate];
+                updateGUITimer = 0;
+            }
+			break;
+        }
+        case VPMSG_CONNECTTIMEOUT:
+        {
+			timeLabel.text = @"Not responding";
+            [[NSNotificationCenter defaultCenter] removeObserver:self];
+            if (updateGUITimer)
+            {
+                [updateGUITimer invalidate];
+                updateGUITimer = 0;
+            }
+            
+			break;
+        }   
+        case VPMSG_CALLENDED: 
+        {
+            timeLabel.text = @"Call Ended";
+//            [self hangup:nil];
+        }
+        break;
+	}
+}
+
+
+
+#pragma mark -
+#pragma mark Memory management
+
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+	
+    // Release any cached data, images, etc. that aren't in use.
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+	
+}
+
+
+- (void)dealloc {
+    [super dealloc];
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	
+    [vpcontact release];
+	delete callers;
+	
+	[[UIApplication sharedApplication] setStatusBarHidden:NO];
+	[UIApplication sharedApplication].idleTimerDisabled = NO;
+    
+}
+
+
+@end

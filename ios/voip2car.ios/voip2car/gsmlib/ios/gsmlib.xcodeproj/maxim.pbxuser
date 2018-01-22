@@ -1,0 +1,139 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeSDKPreference = iphoneos4.2;
+		activeTarget = D2AAC07D0554694100DB518D /* gsmlib */;
+		codeSenseManager = 9448109C130922AD00001E9D /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					702,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 319727610;
+			PBXWorkspaceStateSaveDate = 319727610;
+		};
+		perUserProjectItems = {
+			94E729D0130EA91800750C2D /* XCBuildMessageTextBookmark */ = 94E729D0130EA91800750C2D /* XCBuildMessageTextBookmark */;
+			94E729D2130EA91900750C2D /* PBXTextBookmark */ = 94E729D2130EA91900750C2D /* PBXTextBookmark */;
+			94E729D3130EA91900750C2D /* PBXTextBookmark */ = 94E729D3130EA91900750C2D /* PBXTextBookmark */;
+			94E729D4130EA91900750C2D /* PBXTextBookmark */ = 94E729D4130EA91900750C2D /* PBXTextBookmark */;
+			94E729D5130EA91900750C2D /* PBXTextBookmark */ = 94E729D5130EA91900750C2D /* PBXTextBookmark */;
+		};
+		sourceControlManager = 9448109B130922AD00001E9D /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	9448109B130922AD00001E9D /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	9448109C130922AD00001E9D /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	94E729D0130EA91800750C2D /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Compile /Users/maxim/devel/VPHONET/Working_Copy/voip2car.ios/voip2car/gsmlib/ios/../rpe.c";
+		fRef = D11159A012B3FECA00E743EA /* rpe.c */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 0;
+		rLoc = 0;
+		rType = 1;
+	};
+	94E729D2130EA91900750C2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D111599412B3FECA00E743EA /* gsm.h */;
+		name = "gsm.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 828;
+		vrLoc = 854;
+	};
+	94E729D3130EA91900750C2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D111599612B3FECA00E743EA /* gsm_decode.c */;
+		name = "gsm_decode.c: 9";
+		rLen = 0;
+		rLoc = 329;
+		rType = 0;
+		vrLen = 721;
+		vrLoc = 137;
+	};
+	94E729D4130EA91900750C2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D111599D12B3FECA00E743EA /* preprocess.c */;
+		name = "preprocess.c: 6";
+		rLen = 0;
+		rLoc = 205;
+		rType = 0;
+		vrLen = 898;
+		vrLoc = 0;
+	};
+	94E729D5130EA91900750C2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D11159A012B3FECA00E743EA /* rpe.c */;
+		name = "rpe.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 775;
+		vrLoc = 0;
+	};
+	D111599412B3FECA00E743EA /* gsm.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {880, 1314}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{854, 828}";
+		};
+	};
+	D111599612B3FECA00E743EA /* gsm_decode.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {880, 6534}}";
+			sepNavSelRange = "{329, 0}";
+			sepNavVisRange = "{137, 721}";
+		};
+	};
+	D111599D12B3FECA00E743EA /* preprocess.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {880, 1926}}";
+			sepNavSelRange = "{205, 0}";
+			sepNavVisRange = "{0, 898}";
+		};
+	};
+	D11159A012B3FECA00E743EA /* rpe.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {439, 8676}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 307}";
+		};
+	};
+	D2AAC07D0554694100DB518D /* gsmlib */ = {
+		activeExec = 0;
+	};
+}

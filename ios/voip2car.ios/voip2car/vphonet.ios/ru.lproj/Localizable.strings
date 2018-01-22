@@ -1,0 +1,79 @@
+/* 
+  Localizable.strings
+  Vphonet
+
+  Created by uncle on 18.04.11.
+  Copyright 2011 Lundlay. All rights reserved.
+*/
+
+/* No comment provided by engineer. */
+"Back" = "Назад";
+
+/* No comment provided by engineer. */
+"Bad E-Mail" = "Неверный адрес электронной почты";
+
+/* No comment provided by engineer. */
+"Confirm:" = "Повторить:";
+
+/* No comment provided by engineer. */
+"Continue" = "Продолжить";
+
+/* No comment provided by engineer. */
+"Create Account" = "Создать учетную запись";
+
+/* No comment provided by engineer. */
+"E-Mail:" = "Эл.почта:";
+
+/* No comment provided by engineer. */
+"Error" = "Ошибка";
+
+/* No comment provided by engineer. */
+"First Name:" = "Фамилия:";
+
+/* No comment provided by engineer. */
+"Last Name:" = "Имя:";
+
+/* No comment provided by engineer. */
+"OK" = "Ок";
+
+/* No comment provided by engineer. */
+"Password does not match" = "Пароли не совпадают";
+
+/* No comment provided by engineer. */
+"Password mininimum 6 characters" = "Длина пароля должна быть минимум 6 символов";
+
+/* No comment provided by engineer. */
+"Password:" = "Пароль:";
+
+/* No comment provided by engineer. */
+"Registration" = "Регистрация";
+
+/* No comment provided by engineer. */
+"Required" = "Обязательное";
+
+/* No comment provided by engineer. */
+"The First Name must only contain characters" = "Фамилия должна содержать только символы";
+
+/* No comment provided by engineer. */
+"The Last Name must only contain characters" = "Имя должно содержать только символы";
+
+/* No comment provided by engineer. */
+"Type your new account information" = "Введите информацию о учетной записи";
+
+/* No comment provided by engineer. */
+"User Name mininimum 6 characters and must starts with letter" = "Имя пользователя должно быть минимум 6 символов и начинаться с буквы";
+
+/* No comment provided by engineer. */
+"User name:" = "Имя:";
+
+/* No comment provided by engineer. */
+"User Name:" = "Имя:";
+
+/* No comment provided by engineer. */
+"If you cannot remember you password and need help to restore it, please click here." = "Если Вы не можете вспомнить свой пароль и хотите восстановить его, тыцните тут.";
+
+/* No comment provided by engineer. */
+"click here" =  "тыцните тут";
+
+
+

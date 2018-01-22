@@ -1,0 +1,24 @@
+/avcenc_api.cpp/1.1.1.1/Wed Feb  9 10:00:32 2011//
+/avcenc_api.h/1.1.1.1/Wed Feb  9 10:00:33 2011//
+/avcenc_int.h/1.1.1.1/Wed Feb  9 10:00:33 2011//
+/avcenc_lib.h/1.1.1.1/Wed Feb  9 10:00:33 2011//
+/bitstream_io.cpp/1.1.1.1/Wed Feb  9 10:00:34 2011//
+/block.cpp/1.1.1.1/Wed Feb  9 10:00:34 2011//
+/findhalfpel.cpp/1.1.1.1/Wed Feb  9 10:00:34 2011//
+/header.cpp/1.1.1.1/Wed Feb  9 10:00:35 2011//
+/init.cpp/1.1.1.1/Wed Feb  9 10:00:35 2011//
+/intra_est.cpp/1.1.1.1/Wed Feb  9 10:00:36 2011//
+/motion_comp.cpp/1.1.1.1/Wed Feb  9 10:00:37 2011//
+/motion_est.cpp/1.1.1.1/Wed Feb  9 10:00:38 2011//
+/pvavcencoder.cpp/1.1.1.1/Wed Feb  9 10:00:39 2011//
+/pvavcencoder_factory.cpp/1.1.1.1/Wed Feb  9 10:00:39 2011//
+/rate_control.cpp/1.1.1.1/Wed Feb  9 10:00:39 2011//
+/residual.cpp/1.1.1.1/Wed Feb  9 10:00:39 2011//
+/sad.cpp/1.1.1.1/Wed Feb  9 10:00:39 2011//
+/sad_halfpel.cpp/1.1.1.1/Wed Feb  9 10:00:40 2011//
+/sad_halfpel_inline.h/1.1.1.1/Wed Feb  9 10:00:40 2011//
+/sad_inline.h/1.1.1.1/Wed Feb  9 10:00:40 2011//
+/sad_mb_offset.h/1.1.1.1/Wed Feb  9 10:00:40 2011//
+/slice.cpp/1.1.1.1/Wed Feb  9 10:00:40 2011//
+/vlc_encode.cpp/1.1.1.1/Wed Feb  9 10:00:40 2011//
+D

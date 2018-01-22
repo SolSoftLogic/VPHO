@@ -1,0 +1,84 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = D2AAC07D0554694100DB518D /* avc_h264 */;
+		codeSenseManager = 9448107C1309221A00001E9D /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					547,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 319365543;
+			PBXWorkspaceStateSaveDate = 319365543;
+		};
+		perUserProjectItems = {
+			944810851309225E00001E9D /* XCBuildMessageTextBookmark */ = 944810851309225E00001E9D /* XCBuildMessageTextBookmark */;
+			944810871309226100001E9D /* PBXTextBookmark */ = 944810871309226100001E9D /* PBXTextBookmark */;
+		};
+		sourceControlManager = 9448107B1309221A00001E9D /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	9448107B1309221A00001E9D /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	9448107C1309221A00001E9D /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	944810851309225E00001E9D /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Compile /Users/maxim/devel/VPHONET/CVS/voip2car.ios/voip2car/avc_h264/ios/../enc/src/vlc_encode.cpp";
+		fRef = D155903012B3F4840043985C /* vlc_encode.cpp */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 0;
+		rLoc = 0;
+		rType = 1;
+	};
+	944810871309226100001E9D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D155903012B3F4840043985C /* vlc_encode.cpp */;
+		name = "vlc_encode.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 746;
+		vrLoc = 0;
+	};
+	D155903012B3F4840043985C /* vlc_encode.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {439, 6210}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 344}";
+		};
+	};
+	D2AAC07D0554694100DB518D /* avc_h264 */ = {
+		activeExec = 0;
+	};
+}

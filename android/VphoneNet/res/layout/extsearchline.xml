@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/RLayout"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:paddingLeft="5dip">
+  	<ImageView
+        android:id="@+id/photo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+  		android:layout_height="48px" 
+    	android:layout_width="48px"
+        android:layout_marginRight="5dip"
+        android:src="@drawable/profilepicture"/>
+  	<TextView
+		android:id="@+id/usernambold"
+		android:layout_toRightOf="@id/photo"
+		android:layout_alignTop="@id/photo"
+		android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:textStyle="bold"
+    	android:textSize="18dp"
+		android:textColor="#000000"
+		android:singleLine="true"
+		android:ellipsize="marquee"/>
+	<TextView
+		android:id="@+id/username"
+		android:layout_toRightOf="@id/photo"
+		android:layout_alignBottom="@id/photo"
+    	android:layout_below="@+id/usernambold"
+		android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content"
+    	android:textSize="14dp"
+		android:textColor="#000000"
+		android:singleLine="true"
+		android:ellipsize="marquee"/>
+ 	<ImageView
+       	android:layout_alignParentRight="true"
+        android:id="@+id/arrow"
+        android:layout_centerVertical="true"
+  		android:layout_height="fill_parent" 
+    	android:layout_width="wrap_content"
+    	android:paddingRight="10px"
+        android:src="@drawable/arrowgray"/>
+</RelativeLayout>

@@ -1,0 +1,98 @@
+10
+
+dir
+506
+svn+ssh://mrolnik@mrolnik.svn.ssh/var/svn-repos/adar/vphonet/trunk/gui/qss-Voip2Car/general
+svn+ssh://mrolnik@mrolnik.svn.ssh/var/svn-repos
+
+
+
+2010-11-10T20:54:55.315263Z
+439
+mrolnik
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+1922890e-ef63-4918-9f95-1032048e99bd
+
+QLabel
+dir
+
+trans.sh
+file
+
+
+
+
+2011-02-03T21:26:34.513750Z
+3513d4ad230e747f5eb9403fec6f804c
+2010-11-10T20:44:59.794450Z
+435
+mrolnik
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+383
+
+image
+dir
+
+QSlider
+dir
+
+QHeaderView
+dir
+
+QScrollBar
+dir
+
+QCheckBox
+dir
+
+QComboBox
+dir
+
+QProgressBar
+dir
+
+QRadioButton
+dir
+
+QTextEdit
+dir
+
+QPushButton
+dir
+
+QLineEdit
+dir
+

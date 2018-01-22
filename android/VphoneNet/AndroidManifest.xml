@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.vphonenet"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/logo" android:label="@string/app_name" android:debuggable="true">
+        <activity android:name=".VphoneNet"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       <activity android:name=".Boot"
+            android:label="@string/app_name">
+            <intent-filter>
+                        	<action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+		
+            </intent-filter>
+        </activity>
+      <activity android:name=".WhatToDo"
+            android:label="@string/app_name">
+            <intent-filter>
+ 				<action android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       <activity android:name=".ActiveFraim"
+            android:label="@string/app_name" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+ <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       <activity android:name=".Contacts"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.category.DEFAULT" />
+                
+            </intent-filter>
+        </activity>
+       <activity android:name=".LogIn"
+       		android:windowSoftInputMode="stateVisible|adjustResize"
+            android:label="@string/app_name">
+            <intent-filter>
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       <activity android:name=".Registration"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+      </activity>
+      <activity android:name=".Registrat2"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+      <activity android:name=".ForgotPassword"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>        
+        <activity android:name=".ContactsPack"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChatPack"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Chat"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Chatting"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HistoryPack"
+            android:label="@string/app_name">
+            <intent-filter>
+				<action android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ExternalSearch"
+            android:label="@string/app_name">
+            <intent-filter>
+				<action android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BrifProfile"
+            android:label="@string/app_name">
+            <intent-filter>
+				<action android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+         </activity>
+         <activity android:name=".SendRequest"
+            android:label="@string/app_name">
+            <intent-filter>
+				<action android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+         </activity>
+    </application>
+    <uses-sdk android:minSdkVersion="4" />
+</manifest> 

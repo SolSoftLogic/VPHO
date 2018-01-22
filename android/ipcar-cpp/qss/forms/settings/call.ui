@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>callConfForm</class>
+ <widget class="QWidget" name="callConfForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>674</width>
+    <height>461</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QCheckBox" name="callConf_offline">
+   <property name="geometry">
+    <rect>
+     <x>26</x>
+     <y>90</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Enable when offline</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="callConf_always">
+   <property name="geometry">
+    <rect>
+     <x>26</x>
+     <y>55</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Enable Unconditionally</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="callConf_forwardTo">
+   <property name="geometry">
+    <rect>
+     <x>354</x>
+     <y>128</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>26</x>
+     <y>128</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Forward to</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="callConf_ring">
+   <property name="geometry">
+    <rect>
+     <x>26</x>
+     <y>209</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ring</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="callConf_refuse">
+   <property name="geometry">
+    <rect>
+     <x>26</x>
+     <y>244</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refuse with text</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="callConf_refuseText">
+   <property name="geometry">
+    <rect>
+     <x>354</x>
+     <y>244</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="callConf_deflectNumber">
+   <property name="geometry">
+    <rect>
+     <x>354</x>
+     <y>279</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="callConf_deflect">
+   <property name="geometry">
+    <rect>
+     <x>26</x>
+     <y>279</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Deflect to</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="callConf_accept">
+   <property name="geometry">
+    <rect>
+     <x>26</x>
+     <y>314</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Automatically accept</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="callConf_answer">
+   <property name="geometry">
+    <rect>
+     <x>26</x>
+     <y>349</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Answering macine</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>386</y>
+     <width>100</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>seconds</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>26</x>
+     <y>386</y>
+     <width>221</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Activate chagne after</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="callConf_greeting">
+   <property name="geometry">
+    <rect>
+     <x>414</x>
+     <y>325</y>
+     <width>188</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select Greeting</string>
+   </property>
+   <property name="type" stdset="0">
+    <string>typeA</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>13</y>
+     <width>300</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color=&quot;white&quot;</string>
+   </property>
+   <property name="text">
+    <string>Call forward</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>171</y>
+     <width>300</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color=&quot;white&quot;</string>
+   </property>
+   <property name="text">
+    <string>When receiving a call</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="callConf_wait">
+   <property name="geometry">
+    <rect>
+     <x>249</x>
+     <y>386</y>
+     <width>50</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>0</number>
+   </property>
+   <property name="minimum">
+    <double>1.000000000000000</double>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>chatForm</class>
+ <widget class="QWidget" name="chatForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>707</width>
+    <height>192</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QTextEdit" name="chat_text">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>38</y>
+     <width>682</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="undoRedoEnabled">
+    <bool>false</bool>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="chat_line">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>150</y>
+     <width>688</width>
+     <height>38</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="chat_username">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>3</y>
+     <width>208</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

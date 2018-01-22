@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<keyboard>
+	<key norm="q" caps="Q" symb="1" x="10" y="9" cx="50" cy="53" />
+	<key norm="w" caps="W" symb="2" x="67" y="9" cx="50" cy="53" />
+	<key norm="e" caps="E" symb="3" x="124" y="9" cx="50" cy="53" />
+	<key norm="r" caps="R" symb="4" x="181" y="9" cx="50" cy="53" />
+	<key norm="t" caps="T" symb="5" x="238" y="9" cx="50" cy="53" />
+	<key norm="y" caps="Y" symb="6" x="295" y="9" cx="50" cy="53" />
+	<key norm="u" caps="U" symb="7" x="352" y="9" cx="50" cy="53" />
+	<key norm="i" caps="I" symb="8" x="409" y="9" cx="50" cy="53" />
+	<key norm="o" caps="O" symb="9" x="466" y="9" cx="50" cy="53" />
+	<backspace                      x="519" y="9" cx="177" cy="53" />
+
+	<key norm="p" caps="P" symb="0" x="10" y="68" cx="50" cy="53" />
+	<key norm="a" caps="A" symb="." x="67" y="68" cx="50" cy="53" />
+	<key norm="s" caps="S" symb="," x="124" y="68" cx="50" cy="53" />
+	<key norm="d" caps="D" symb=":" x="181" y="68" cx="50" cy="53" />
+	<key norm="f" caps="F" symb="?" x="238" y="68" cx="50" cy="53" />
+	<key norm="g" caps="G" symb="!" x="295" y="68" cx="50" cy="53" />
+	<key norm="h" caps="H" symb="-" x="352" y="68" cx="50" cy="53" />
+	<key norm="j" caps="J" symb="_" x="409" y="68" cx="50" cy="53" />
+	<key norm="k" caps="K" symb="@" x="466" y="68" cx="50" cy="53" />
+	<shift                          x="519" y="68" cx="177" cy="53" />
+
+	<key norm="l" caps="L" symb="+" x="10" y="127" cx="50" cy="53" />
+	<key norm="z" caps="Z" symb="*" x="67" y="127" cx="50" cy="53" />
+	<key norm="x" caps="X" symb="=" x="124" y="127" cx="50" cy="53" />
+	<key norm="c" caps="C" symb="/" x="181" y="127" cx="50" cy="53" />
+	<key norm="v" caps="V" symb="#" x="238" y="127" cx="50" cy="53" />
+	<key norm="b" caps="B" symb="&quot;" x="295" y="127" cx="50" cy="53" />
+	<key norm="n" caps="N" symb="%" x="352" y="127" cx="50" cy="53" />
+	<key norm="m" caps="M" symb="(" x="409" y="127" cx="50" cy="53" />
+	<key norm="?" caps="?" symb=")" x="466" y="127" cx="50" cy="53" />
+	<enter                          x="519" y="127" cx="177" cy="53" />
+
+	<abc123                         x="10" y="186" cx="107" cy="37" />
+	<key norm=" " caps=" " symb=" " x="123" y="186" cx="389" cy="37" />
+	<send                           x="519" y="186" cx="178" cy="37" />
+</keyboard>
